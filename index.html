@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>24Import — Relojes de Alta Gama</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#C9A84C;--gold2:#E8C96A;--dark:#0D0D0D;--dark2:#161616;--dark3:#1E1E1E;--white:#F9F7F2;--gray:#8A8A8A;--gray2:#C8C8C8;--border:rgba(201,168,76,0.25);--green:#25D366;--red:#DC2626}
+body{font-family:'Jost',sans-serif;background:var(--dark);color:var(--white)}
+header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-bottom:1px solid var(--border);padding:0 18px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--gold);letter-spacing:2px;text-decoration:none}
+.logo span{color:var(--white);font-weight:400}
+.header-right{display:flex;align-items:center;gap:10px}
+.hwa{display:flex;align-items:center;gap:6px;background:var(--green);color:white;text-decoration:none;padding:9px 14px;border-radius:50px;font-size:12px;font-weight:600}
+.admin-btn{background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.5);color:var(--gold);padding:9px 14px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Jost',sans-serif}
+.hero{padding:48px 18px 36px;text-align:center;background:linear-gradient(180deg,#161616 0%,var(--dark) 100%);border-bottom:1px solid rgba(201,168,76,0.2)}
+.hero-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,8vw,56px);font-weight:600;line-height:1.1;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:14px;color:var(--gray2);max-width:420px;margin:0 auto 18px;line-height:1.6;font-weight:300}
+.hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.hbadge{font-size:11px;font-weight:600;padding:6px 13px;border-radius:20px;border:1px solid rgba(201,168,76,0.5);color:var(--gold);background:rgba(201,168,76,0.08)}
+.hero-note{font-size:11px;color:var(--gray)}
+.section{padding:32px 18px 40px;max-width:1100px;margin:0 auto}
+.cat-bar{display:flex;align-items:center;gap:12px;padding:12px 18px;border-radius:10px;margin-bottom:22px;border:1px solid}
+.cat-bar.rolex{background:rgba(201,168,76,0.07);border-color:rgba(201,168,76,0.3)}
+.cat-bar.patek{background:rgba(100,149,237,0.07);border-color:rgba(100,149,237,0.3)}
+.cat-bar.cartier{background:rgba(220,38,38,0.07);border-color:rgba(220,38,38,0.3)}
+.cat-badge{font-size:9px;font-weight:800;padding:3px 10px;border-radius:20px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+.rolex .cat-badge{background:rgba(201,168,76,0.2);color:var(--gold)}
+.patek .cat-badge{background:rgba(100,149,237,0.2);color:#6495ED}
+.cartier .cat-badge{background:rgba(220,38,38,0.2);color:#EF4444}
+.cat-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700}
+.rolex .cat-title{color:var(--gold2)}
+.patek .cat-title{color:#93B4F0}
+.cartier .cat-title{color:#FCA5A5}
+.cat-desc{font-size:11px;color:var(--gray);margin-top:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-bottom:48px}
+.card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s;position:relative}
+.card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 32px rgba(0,0,0,0.5)}
+.card-img{width:100%;height:220px;object-fit:cover;object-position:center center;display:block;transition:transform 0.3s}
+.card:hover .card-img{transform:scale(1.04)}
+.card-top{height:3px;background:linear-gradient(90deg,#9A7A2E,var(--gold2))}
+.card-top.patek{background:linear-gradient(90deg,#3B5998,#6495ED)}
+.card-top.cartier{background:linear-gradient(90deg,#991B1B,#EF4444)}
+.card-info{padding:14px 16px 16px}
+.card-brand{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:4px}
+.card-model{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--white);margin-bottom:3px;line-height:1.2}
+.card-variant{font-size:10px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.card-footer{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.card-price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold)}
+.card-ver{font-size:11px;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:7px 12px;border-radius:50px;font-weight:600}
+.sold-badge{position:absolute;top:10px;left:10px;background:rgba(220,38,38,0.9);color:white;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:500;overflow-y:auto;padding:20px}
+.modal-bg.open{display:block}
+.modal{background:var(--dark2);border:1px solid rgba(201,168,76,0.3);border-radius:16px;width:100%;max-width:500px;margin:0 auto;overflow:hidden;animation:mIn 0.25s ease}
+@keyframes mIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.modal-img{width:100%;height:280px;object-fit:cover;object-position:center center;display:block}
+.modal-gold{height:3px;background:linear-gradient(90deg,#9A7A2E,var(--gold2))}
+.modal-body{padding:22px}
+.modal-brand{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
+.modal-model{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:4px}
+.modal-variant{font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px}
+.modal-desc{font-size:13px;color:var(--gray2);line-height:1.7;margin-bottom:16px;font-weight:300}
+.modal-price{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:var(--gold);margin-bottom:14px}
+.modal-envio{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);border-radius:8px;padding:12px 14px;margin-bottom:16px}
+.modal-envio p{font-size:12px;color:var(--gray2);line-height:1.8}
+.modal-envio strong{color:var(--gold2)}
+.modal-actions{display:flex;gap:10px}
+.modal-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:white;text-decoration:none;padding:14px;border-radius:10px;font-size:14px;font-weight:700}
+.modal-close{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--gray2);padding:14px 18px;border-radius:10px;cursor:pointer;font-family:'Jost',sans-serif;font-size:13px}
+.login-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:800;align-items:center;justify-content:center;padding:20px}
+.login-overlay.open{display:flex}
+.login-box{background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:32px;width:100%;max-width:360px}
+.login-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--white);margin-bottom:6px}
+.login-sub{font-size:13px;color:var(--gray);margin-bottom:24px}
+.login-input{width:100%;background:var(--dark3);border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:13px 16px;border-radius:8px;font-family:'Jost',sans-serif;font-size:15px;margin-bottom:12px;-webkit-appearance:none}
+.login-input:focus{outline:none;border-color:var(--gold)}
+.login-btn{width:100%;background:var(--gold);color:var(--dark);border:none;padding:14px;border-radius:8px;font-family:'Jost',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+.login-err{font-size:12px;color:var(--red);margin-bottom:10px;display:none}
+.login-cancel{width:100%;background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--gray);padding:12px;border-radius:8px;font-family:'Jost',sans-serif;font-size:13px;cursor:pointer;margin-top:8px}
+.admin-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:800;overflow-y:auto;padding:20px}
+.admin-overlay.open{display:block}
+.admin-inner{max-width:600px;margin:0 auto;padding-bottom:40px}
+.admin-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-top:8px}
+.admin-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--white)}
+.admin-close{background:transparent;border:1px solid var(--border);color:var(--gray);padding:8px 16px;border-radius:8px;font-family:'Jost',sans-serif;font-size:12px;cursor:pointer}
+.admin-section{background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:20px}
+.admin-section-title{font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:18px}
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.field label{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--gray);font-weight:600}
+.field input,.field textarea,.field select{background:var(--dark3);border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:12px 14px;border-radius:8px;font-family:'Jost',sans-serif;font-size:14px;width:100%;-webkit-appearance:none}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold)}
+.field textarea{min-height:90px;resize:vertical;line-height:1.5}
+.field input::placeholder,.field textarea::placeholder{color:var(--gray)}
+.upload-area{border:2px dashed rgba(201,168,76,0.3);border-radius:8px;padding:24px;text-align:center;cursor:pointer;position:relative;background:var(--dark3)}
+.upload-area input{position:absolute;inset:0;opacity:0;cursor:pointer;font-size:0}
+.upload-area p{font-size:13px;color:var(--gray2);margin-bottom:4px}
+.upload-area small{font-size:11px;color:var(--gray)}
+.preview-wrap{margin-top:10px;display:none}
+.preview-wrap img{width:100%;max-height:180px;object-fit:cover;border-radius:6px}
+.add-btn{width:100%;background:var(--gold);color:var(--dark);border:none;padding:14px;border-radius:8px;font-family:'Jost',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+.admin-item{background:var(--dark3);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.admin-item-header{display:flex;align-items:center;gap:12px;padding:12px 14px;cursor:pointer}
+.admin-item-header img{width:56px;height:56px;object-fit:cover;border-radius:6px;flex-shrink:0}
+.admin-item-info{flex:1;min-width:0}
+.admin-item-model{font-size:14px;font-weight:600;color:var(--white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.admin-item-price{font-size:12px;color:var(--gold)}
+.admin-item-toggle{color:var(--gray);font-size:16px;flex-shrink:0}
+.admin-edit-form{display:none;padding:14px;border-top:1px solid var(--border);background:var(--dark2)}
+.admin-edit-form.open{display:block}
+.edit-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.edit-actions{display:flex;gap:8px;margin-top:12px}
+.save-btn{flex:1;background:var(--gold);color:var(--dark);border:none;padding:11px;border-radius:8px;font-family:'Jost',sans-serif;font-size:13px;font-weight:700;cursor:pointer}
+.del-btn{background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.4);color:var(--red);padding:11px 16px;border-radius:8px;font-family:'Jost',sans-serif;font-size:13px;cursor:pointer}
+.float{position:fixed;bottom:20px;right:20px;z-index:999;background:var(--green);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.4)}
+footer{background:#080808;border-top:1px solid var(--border);padding:28px 18px;text-align:center}
+footer .logo{font-size:20px;display:block;margin-bottom:8px}
+.ft{font-size:11px;color:var(--gray);line-height:1.9}
+.ft a{color:var(--gold);text-decoration:none}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--gold);color:var(--dark);padding:11px 22px;border-radius:8px;font-size:13px;font-weight:700;z-index:9999;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* BRAND HEADERS */
+.brand-header {
+  text-align: center;
+  padding: 32px 20px 24px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ROLEX */
+.brand-rolex {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0a0a0a 100%);
+  border: 1px solid rgba(201,168,76,0.4);
+}
+.brand-rolex::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A84C, #E8C96A, #C9A84C, transparent);
+}
+.brand-rolex::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C9A84C, #E8C96A, #C9A84C, transparent);
+}
+.brand-crown {
+  font-size: 22px;
+  color: #C9A84C;
+  margin-bottom: 6px;
+  display: block;
+}
+.brand-name-rolex {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 12px;
+  color: #C9A84C;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.brand-sub-rolex {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: rgba(201,168,76,0.6);
+  text-transform: uppercase;
+}
+
+/* PATEK PHILIPPE */
+.brand-patek {
+  background: linear-gradient(135deg, #050810 0%, #0a0f1a 50%, #050810 100%);
+  border: 1px solid rgba(100,149,237,0.3);
+}
+.brand-patek::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6495ED, #93B4F0, #6495ED, transparent);
+}
+.brand-patek::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #6495ED, #93B4F0, #6495ED, transparent);
+}
+.brand-seal {
+  font-size: 16px;
+  color: #6495ED;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: 8px;
+}
+.brand-name-patek {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 8px;
+  color: #93B4F0;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.brand-loc {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 6px;
+  color: rgba(100,149,237,0.5);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.brand-sub-patek {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(147,180,240,0.5);
+  letter-spacing: 1px;
+}
+
+/* CARTIER */
+.brand-cartier {
+  background: linear-gradient(135deg, #0a0505 0%, #120808 50%, #0a0505 100%);
+  border: 1px solid rgba(220,38,38,0.3);
+}
+.brand-cartier::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #DC2626, #EF4444, #DC2626, transparent);
+}
+.brand-cartier::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #DC2626, #EF4444, #DC2626, transparent);
+}
+.brand-name-cartier {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 6px;
+  color: #FCA5A5;
+  margin-bottom: 8px;
+}
+.brand-sub-cartier {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: rgba(220,38,38,0.5);
+  text-transform: uppercase;
+}
+
+.brand-top-row { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 8px; }
+.brand-divider-rolex { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, #C9A84C, transparent); margin: 10px auto; }
+.brand-cat-rolex { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 6px; color: #F9F7F2; text-transform: uppercase; margin-bottom: 10px; }
+.brand-divider-patek { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #6495ED, transparent); margin: 10px auto; }
+.brand-cat-patek { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 6px; color: #F9F7F2; text-transform: uppercase; margin-bottom: 10px; }
+.brand-divider-cartier { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #DC2626, transparent); margin: 10px auto; }
+.brand-cat-cartier { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 6px; color: #F9F7F2; text-transform: uppercase; margin-bottom: 10px; }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 520px;
+  margin: 24px auto 0;
+}
+.trust-item {
+  background: rgba(201,168,76,0.07);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 10px;
+  padding: 16px 14px;
+  text-align: center;
+}
+.trust-icon { font-size: 22px; margin-bottom: 6px; }
+.trust-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #C9A84C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.trust-desc {
+  font-size: 11px;
+  color: #8A8A8A;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">24<span>Import</span></a>
+  <div class="header-right">
+    <a href="https://wa.me/5491162152890?text=Hola!%20Vi%20el%20catalogo%20de%2024Import%20y%20quiero%20consultar" class="hwa" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Consultar
+    </a>
+    <button class="admin-btn" onclick="openLogin()">Admin</button>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="hero-eye">5 Anos de Experiencia en el Rubro</p>
+  <h1>Relojes de <em>Alta Gama</em></h1>
+  <p class="hero-sub">Compra con total confianza. Atencion personalizada por WhatsApp, envios a todo el pais y contra entrega en CABA y Gran Buenos Aires.</p>
+
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-icon">🤝</div>
+      <div class="trust-label">Contra Entrega</div>
+      <div class="trust-desc">CABA y Gran Buenos Aires<br>Paga cuando lo recibis</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">🚚</div>
+      <div class="trust-label">Envios a Todo el Pais</div>
+      <div class="trust-desc">Por correo o mensajeria<br>Rapido y seguro</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💳</div>
+      <div class="trust-label">Pago Flexible</div>
+      <div class="trust-desc">Efectivo o transferencia<br>Sin complicaciones</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon">💬</div>
+      <div class="trust-label">Atencion por WhatsApp</div>
+      <div class="trust-desc">Respondemos al instante<br>Todos los dias</div>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="brand-header brand-rolex">
+    <div class="brand-top-row">
+      <div class="brand-crown">♛</div>
+      <div class="brand-name-rolex">ROLEX</div>
+      <div class="brand-crown">♛</div>
+    </div>
+    <div class="brand-divider-rolex"></div>
+    <div class="brand-cat-rolex">AAA+ AUTOMÁTICOS</div>
+    <div class="brand-sub-rolex">OYSTER PERPETUAL &nbsp;·&nbsp; SUPERLATIVE CHRONOMETER</div>
+  </div>
+  <div class="grid" id="grid-rolex"></div>
+
+  <div class="brand-header brand-patek">
+    <div class="brand-seal">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <div class="brand-name-patek">PATEK PHILIPPE</div>
+    <div class="brand-loc">GENÈVE</div>
+    <div class="brand-divider-patek"></div>
+    <div class="brand-cat-patek">AAA+ AUTOMÁTICOS</div>
+    <div class="brand-sub-patek">You never actually own a Patek Philippe.</div>
+  </div>
+  <div class="grid" id="grid-patek"></div>
+
+  <div class="brand-header brand-cartier">
+    <div class="brand-name-cartier">Cartier</div>
+    <div class="brand-divider-cartier"></div>
+    <div class="brand-cat-cartier">AAA+ AUTOMÁTICOS</div>
+    <div class="brand-sub-cartier">PARIS &nbsp;·&nbsp; FONDÉE EN 1847</div>
+  </div>
+  <div class="grid" id="grid-cartier"></div>
+</div>
+
+<footer>
+  <a href="#" class="logo">24<span>Import</span></a>
+  <p class="ft">Relojes de Alta Gama - Inspirados en las mejores marcas<br>
+  WhatsApp: <a href="https://wa.me/5491162152890">+54 9 11 6215-2890</a><br>
+  Envios a todo el pais - Contra entrega CABA y GBA</p>
+</footer>
+
+<a href="https://wa.me/5491162152890?text=Hola!%20Vi%20el%20catalogo%20de%2024Import%20y%20quiero%20consultar" class="float" target="_blank">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <img class="modal-img" id="mImg" src="" alt="">
+    <div class="modal-gold" id="mGold"></div>
+    <div class="modal-body">
+      <div class="modal-brand" id="mBrand"></div>
+      <div class="modal-model" id="mModel"></div>
+      <div class="modal-variant" id="mVariant"></div>
+      <div class="modal-desc" id="mDesc"></div>
+      <div class="modal-price" id="mPrice"></div>
+      <div class="modal-envio">
+        <p><strong>Contra entrega</strong> en CABA y Gran Buenos Aires<br>
+        <strong>Envios a todo el pais</strong> por correo o mensajeria<br>
+        <strong>Pagos:</strong> Efectivo o Transferencia bancaria</p>
+      </div>
+      <div class="modal-actions">
+        <a class="modal-wa" id="mWa" href="#" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Me interesa — Consultar stock
+        </a>
+        <button class="modal-close" onclick="closeModal()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="login-overlay" id="loginOverlay">
+  <div class="login-box">
+    <div class="login-title">Panel Admin</div>
+    <div class="login-sub">Ingresa la contrasena para gestionar el catalogo</div>
+    <p class="login-err" id="loginErr">Contrasena incorrecta</p>
+    <input class="login-input" type="password" id="loginPass" placeholder="Contrasena" onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="login-btn" onclick="doLogin()">Ingresar</button>
+    <button class="login-cancel" onclick="closeLogin()">Cancelar</button>
+  </div>
+</div>
+
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-inner">
+    <div class="admin-header">
+      <div class="admin-title">Panel Admin</div>
+      <button class="admin-close" onclick="closeAdmin()">Cerrar</button>
+    </div>
+    <div class="admin-section">
+      <div class="admin-section-title">Agregar nuevo reloj</div>
+      <div class="field"><label>Nombre del modelo</label><input type="text" id="aModel" placeholder="Ej: Submariner Gold"></div>
+      <div class="field"><label>Marca</label>
+        <select id="aBrand">
+          <option value="Rolex">Rolex</option>
+          <option value="Patek Philippe">Patek Philippe</option>
+          <option value="Cartier">Cartier</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+      <div class="field"><label>Variante / Colores</label><input type="text" id="aVariant" placeholder="Ej: Esfera Negra - Caja Gold"></div>
+      <div class="field"><label>Precio</label><input type="text" id="aPrice" placeholder="$ 200.000"></div>
+      <div class="field"><label>Descripcion</label><textarea id="aDesc" placeholder="Describe el reloj..."></textarea></div>
+      <div class="field">
+        <label>Foto del reloj</label>
+        <div class="upload-area">
+          <input type="file" id="aImg" accept="image/*" onchange="previewNew(event)">
+          <p>Toca para elegir una foto</p>
+          <small>JPG o PNG desde tu celu</small>
+          <div class="preview-wrap" id="newPreview"><img id="newPreviewImg" src="" alt=""></div>
+        </div>
+      </div>
+      <button class="add-btn" onclick="addWatch()">Agregar al catalogo</button>
+    </div>
+    <div class="admin-section">
+      <div class="admin-section-title">Relojes en el catalogo (<span id="watchCount">0</span>)</div>
+      <div id="adminList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+var CLD = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_800,c_auto,g_auto:subject,q_auto:best,f_auto/";
+var PASS = "24import2024";
+var WA = "5491162152890";
+var SK = "24import_extra_v2";
+
+var BUILT_IN = [
+  {brand:"Rolex",model:"Datejust Nacar y Negro",variant:"Esfera Nacar y Negra con Diamantes",price:"$ 200.000",status:"disponible",img:CLD+"d8f8a9d0-2bb0-408e-98de-dfa33c56606e_py7lon.jpg",desc:"Dos versiones del Datejust. Esfera nacar blanca o negra con diamantes. Brazalete Jubilee, movimiento automatico."},
+  {brand:"Rolex",model:"Datejust Gold",variant:"Esfera Verde y Negra - Caja Full Gold",price:"$ 200.000",status:"disponible",img:CLD+"a4dba4dc-a453-44b7-988c-f3630c61afed_cqwlid.jpg",desc:"El Datejust completamente bañado en oro. Disponible en esfera verde o negra, ambas con bisel acanalado dorado y brazalete President. Movimiento automatico."},
+  {brand:"Rolex",model:"GMT-Master II Pepsi",variant:"Bisel Rojo/Negro y Azul/Rojo",price:"$ 200.000",status:"disponible",img:CLD+"e8466473-6954-4381-9ff0-070214c62902_gx65p0.jpg",desc:"El mitico Pepsi. Bisel bicolor rojo y azul con escala de 24 horas. Movimiento automatico."},
+  {brand:"Rolex",model:"Daytona Acero",variant:"Esfera Blanca y Negra - Bisel Negro",price:"$ 200.000",status:"disponible",img:CLD+"2c23be90-efdd-4fd7-8fbd-7d9a6b74f5f7_f9ijrx.jpg",desc:"El cronografo de los campeones. Tres subdiales funcionales, bisel ceramico negro, caja de acero. Movimiento automatico."},
+  {brand:"Rolex",model:"Labelnoir Azul y Blanco",variant:"Esfera Azul y Blanca - Tourbillon Visible",price:"$ 200.000",status:"disponible",img:CLD+"fff392b5-dd7b-413c-a494-008189ea6427_xjuf8e.jpg",desc:"El Labelnoir con tourbillon visible. Disponible en azul zafiro o blanco nacar. El mecanismo gira visible en la esfera."},
+  {brand:"Rolex",model:"Labelnoir Negro y Celeste",variant:"Esfera Negra y Celeste - Tourbillon Visible",price:"$ 200.000",status:"disponible",img:CLD+"70463405-f6b1-4149-8b5b-61d7b21f60cf_yvrtfh.jpg",desc:"Dos colorways del Labelnoir. Esfera negra o celeste. El tourbillon dorado gira visible. Movimiento automatico."},
+  {brand:"Rolex",model:"Oyster Perpetual Candy",variant:"Esfera Menta Multicolor - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"d25ec0cb-a733-4864-b191-1cb620997c4d_famhg0.jpg",desc:"La pieza mas audaz. Esfera verde menta con circulos de colores vibrantes. Para los que quieren un reloj que hable por si solo."},
+  {brand:"Rolex",model:"Oyster Perpetual Candy Gold",variant:"Esfera Menta Multicolor - Caja Gold",price:"$ 200.000",status:"disponible",img:CLD+"cd706bff-be27-4faf-bd1d-6d23c425811d_crf0xv.jpg",desc:"La pieza mas audaz en version gold. Esfera verde menta con circulos de colores. Caja bañada en oro."},
+  {brand:"Rolex",model:"GMT-Master II Negro",variant:"Bisel Negro - Acero y Bicolor",price:"$ 200.000",status:"disponible",img:CLD+"b7e6cfb0-1989-4e69-9bb8-71f5f8c1febc_ivliq1.jpg",desc:"El reloj del viajero. Permite seguir dos husos horarios simultaneamente. Disponible en acero o bicolor."},
+  {brand:"Rolex",model:"Daytona Rubber Gold",variant:"Esfera Verde y Negra - Correa Rubber Gold",price:"$ 200.000",status:"disponible",img:CLD+"099428a3-7726-4199-a80b-234c372fcaae_jd9wto.jpg",desc:"Caja bañada en oro con correa de goma negra. Disponible en esfera verde, negra o con diamantes."},
+  {brand:"Rolex",model:"Submariner Gold",variant:"Esfera Champagne y Negra - Caja Gold",price:"$ 200.000",status:"disponible",img:CLD+"155a30e7-baef-42cb-a641-c980fb3f2d7d_ghq8lg.jpg",desc:"El Submariner en version lujosa. Caja y brazalete bañados en oro. Movimiento automatico, cristal de alta resistencia."},
+  {brand:"Rolex",model:"Sky-Dweller Gold",variant:"Esfera Negra y Plateada - Full Gold",price:"$ 200.000",status:"disponible",img:CLD+"fdf7a0c1-1da6-4c7b-ac4e-540719945671_f8h6ji.jpg",desc:"El Sky-Dweller completamente bañado en oro. Esfera negra o plateada. Doble huso horario, movimiento automatico."},
+  {brand:"Rolex",model:"Daytona Acero Bisel Negro",variant:"Esfera Blanca y Negra - Bisel Ceramico",price:"$ 200.000",status:"disponible",img:CLD+"b10258ab-c0d1-42db-8e65-843f51da0977_ycyknx.jpg",desc:"El Daytona en acero con bisel negro ceramico. Tres subdiales funcionales. Movimiento automatico."},
+  {brand:"Rolex",model:"Submariner Hulk",variant:"Esfera Verde - Acero y Gold",price:"$ 200.000",status:"disponible",img:CLD+"c3a3c3e9-c24e-48c7-8c9c-820c7b87a8e8_skxlxg.jpg",desc:"El Submariner mas codiciado. Su distintiva esfera y bisel verde lo hacen inconfundible. Disponible en acero o gold."},
+  {brand:"Rolex",model:"GMT-Master II Sprite",variant:"Bisel Verde/Negro - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"99f81eeb-3be2-4893-b95a-b05b9c1f698f_dfvr7e.jpg",desc:"La edicion mas moderna del GMT-Master II. Su bisel bicolor verde y negro es uno de los diseños mas buscados."},
+  {brand:"Rolex",model:"Daytona Rubber Acero",variant:"Esfera Negra y Plateada - Correa Rubber",price:"$ 200.000",status:"disponible",img:CLD+"1a01e6f6-196b-4ed2-bd3f-e206e01b8dd5_smnqyc.jpg",desc:"El Daytona mas moderno. Caja de acero con correa de goma negra. Esfera negra o plateada."},
+  {brand:"Rolex",model:"Sky-Dweller Negro y Verde",variant:"Esfera Negra y Verde - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"38b9b496-ac69-485d-9bbb-e53ba3a70ac7_pfs9wo.jpg",desc:"El Sky-Dweller en sus variantes mas llamativas. Esfera negra o verde. Movimiento automatico con doble huso horario."},
+  {brand:"Rolex",model:"GMT-Master II Pepsi Acero",variant:"Bisel Rojo/Negro - Esfera Plateada",price:"$ 200.000",status:"disponible",img:CLD+"fe6059a0-0f0b-4af1-8727-308ef186ad35_u6q6p7.jpg",desc:"El GMT-Master II Pepsi en acero con esfera plateada. Bisel bicolor rojo y negro, movimiento automatico."},
+  {brand:"Rolex",model:"Daytona Gold",variant:"Esfera Negra y Champagne - Caja Gold",price:"$ 200.000",status:"disponible",img:CLD+"1f2496dc-055d-4c4a-b702-27ab63ca1f4f_aysemp.jpg",desc:"El Daytona en version lujosa. Caja y brazalete bañados en oro. La combinacion perfecta entre deportividad y lujo."},
+  {brand:"Rolex",model:"Sky-Dweller Acero y Gold",variant:"Esfera Negra y Dorada - Acero y Gold",price:"$ 200.000",status:"disponible",img:CLD+"11893d25-c6b9-4627-971b-072844b662ea_jv8zv8.jpg",desc:"El Sky-Dweller disponible en acero o gold. Doble huso horario, movimiento automatico."},
+  {brand:"Rolex",model:"Submariner Negro",variant:"Esfera Negra - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"ab961f37-c519-46f6-8c7e-1f9c7d593345_l2jy22.jpg",desc:"La version mas clasica del Submariner. Esfera negra, bisel ceramico negro, caja de acero. Movimiento automatico."},
+  {brand:"Rolex",model:"Sky-Dweller Bicolor",variant:"Esfera Plateada y Dorada - Acero y Gold",price:"$ 200.000",status:"disponible",img:CLD+"32134c38-39e9-4c45-9f3a-9d1ae214d8de_mnzbeu.jpg",desc:"El Sky-Dweller bicolor con esfera plateada o dorada. Combinacion de acero y oro, movimiento automatico."},
+  {brand:"Rolex",model:"Daytona Rubber Gold Diamantes",variant:"Esfera Plateada con Diamantes - Caja Gold",price:"$ 200.000",status:"disponible",img:CLD+"833b4ec2-6012-4608-bcb6-63bbc28f3a82_lnexbx.jpg",desc:"La pieza mas exclusiva. Esfera plateada con indices de diamante, caja bañada en oro y correa de goma."},
+  {brand:"Rolex",model:"Datejust Diamantes Acero",variant:"Esfera Gris con Diamantes - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"9c3c2ba6-d5c8-4c71-bfce-a8626c1a969c_qfcftf.jpg",desc:"El Datejust con esfera sunray y diamantes en caja de acero. Bisel acanalado, movimiento automatico."},
+  {brand:"Patek Philippe",model:"Nautilus Acero Azul",variant:"Esfera Azul - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"764c8278-3d46-4473-b9b9-71ef31274288_jmfuvy.jpg",desc:"El Nautilus en acero con esfera azul oscuro. El reloj mas buscado del mercado. Movimiento automatico."},
+  {brand:"Patek Philippe",model:"Nautilus Gold",variant:"Esfera Dorada - Caja Gold",price:"$ 200.000",status:"disponible",img:CLD+"8177cc18-7f9f-4c5f-b5f8-dacea15617b1_lv42zs.jpg",desc:"El Nautilus completamente bañado en oro con esfera dorada. Lujo discreto en su maxima expresion."},
+  {brand:"Patek Philippe",model:"Nautilus Bicolor",variant:"Esfera Azul/Dorada - Acero y Gold",price:"$ 200.000",status:"disponible",img:CLD+"7a5b4f08-13f6-4e1c-ba39-42159e519fed_cwc1fy.jpg",desc:"El Nautilus bicolor, combinacion perfecta entre acero y oro. Esfera azul con indices dorados."},
+  {brand:"Patek Philippe",model:"Nautilus Acero Plateado",variant:"Esfera Plateada - Caja Acero",price:"$ 200.000",status:"disponible",img:CLD+"b6c029ff-ad90-4d2c-adcd-78e60a95abc5_k3tldc.jpg",desc:"El Nautilus en acero con esfera plateada. Version clasica y discreta. Movimiento automatico de alta precision."},
+  {brand:"Patek Philippe",model:"Nautilus Rojo",variant:"Esfera Roja - Caja Bicolor",price:"$ 200.000",status:"disponible",img:CLD+"79a0f9bc-773f-40a3-b1ef-cbd60154f923_ld6bsm.jpg",desc:"El Nautilus en version roja. Esfera en rojo vibrante con caja bicolor acero-gold."},
+  {brand:"Patek Philippe",model:"Nautilus Gold Plateado",variant:"Esfera Plateada - Caja Full Gold",price:"$ 200.000",status:"disponible",img:CLD+"e002b2d2-b4f7-4d36-8ceb-bb349e58ba56_in6fxk.jpg",desc:"Nautilus completamente en oro con esfera plateada. Brazalete integrado de oro, movimiento automatico."},
+  {brand:"Patek Philippe",model:"Nautilus Acero Azul Oscuro",variant:"Esfera Azul Oscuro - Caja Acero Premium",price:"$ 200.000",status:"disponible",img:CLD+"daa7cccc-53bb-4ef2-80a2-032951c2c33f_tura3x.jpg",desc:"El Nautilus clasico en acero con esfera azul oscuro. Acabados de primer nivel. Movimiento automatico."},
+  {brand:"Cartier",model:"Santos Cuadrado",variant:"Esfera Blanca y Azul - Caja Gold",price:"$ 200.000",status:"disponible",img:CLD+"55286ff8-16e8-4e08-b80f-97b82bdf9ac5_leuggi.jpg",desc:"El Santos de Cartier con su caja cuadrada caracteristica. Disponible en esfera blanca o azul. Movimiento automatico."},
+  {brand:"Cartier",model:"Santos Gold Premium",variant:"Esfera Blanca - Caja Gold Full",price:"$ 200.000",status:"disponible",img:CLD+"c0440cfa-babe-4fbd-9635-add797c5f815_mclohv.jpg",desc:"El Santos completamente bañado en oro. Esfera blanca con numeracion romana dorada. La joya de la relojeria francesa."}
+];
+
+var EXTRA = [];
+try { EXTRA = JSON.parse(localStorage.getItem(SK) || "[]"); } catch(e){}
+var ALL = BUILT_IN.concat(EXTRA);
+
+function buildGrid(gridId, brand) {
+  var g = document.getElementById(gridId);
+  if (!g) return;
+  var items = ALL.filter(function(w){ return w.brand === brand && w.status !== "borrado"; });
+  if (!items.length) { g.innerHTML = "<p style=\"color:var(--gray);padding:20px;grid-column:1/-1\">Proximamente...</p>"; return; }
+  var h = "";
+  items.forEach(function(w) {
+    var idx = ALL.indexOf(w);
+    var topClass = brand === "Patek Philippe" ? " patek" : brand === "Cartier" ? " cartier" : "";
+    h += "<div class=\"card\" onclick=\"openModal("+idx+")\">";
+    h += "<img class=\"card-img\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
+    if (w.status === "vendido") h += "<div class=\"sold-badge\">VENDIDO</div>";
+    h += "<div class=\"card-top"+topClass+"\"></div>";
+    h += "<div class=\"card-info\">";
+    h += "<div class=\"card-brand\">"+w.brand+"</div>";
+    h += "<div class=\"card-model\">"+w.model+"</div>";
+    h += "<div class=\"card-variant\">"+w.variant+"</div>";
+    h += "<div class=\"card-footer\">";
+    h += "<span class=\"card-price\">"+w.price+"</span>";
+    h += "<span class=\"card-ver\">Consultar disponibilidad</span>";
+    h += "</div></div></div>";
+  });
+  g.innerHTML = h;
+}
+
+function render() {
+  ALL = BUILT_IN.concat(EXTRA);
+  buildGrid("grid-rolex", "Rolex");
+  buildGrid("grid-patek", "Patek Philippe");
+  buildGrid("grid-cartier", "Cartier");
+}
+
+function openModal(i) {
+  var w = ALL[i];
+  var bc = {"Rolex":"linear-gradient(90deg,#9A7A2E,#E8C96A)","Patek Philippe":"linear-gradient(90deg,#3B5998,#6495ED)","Cartier":"linear-gradient(90deg,#991B1B,#EF4444)"};
+  document.getElementById("mImg").src = w.img;
+  document.getElementById("mGold").style.background = bc[w.brand] || bc["Rolex"];
+  document.getElementById("mBrand").textContent = w.brand;
+  document.getElementById("mModel").textContent = w.model;
+  document.getElementById("mVariant").textContent = w.variant;
+  document.getElementById("mDesc").textContent = w.desc;
+  document.getElementById("mPrice").textContent = w.price;
+  var msg = encodeURIComponent("Hola! Vi el catalogo de 24Import y me interesa el "+w.model+" - "+w.variant+". Tienen stock disponible?");
+  document.getElementById("mWa").href = "https://wa.me/"+WA+"?text="+msg;
+  document.getElementById("modalBg").classList.add("open");
+  document.getElementById("modalBg").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+function closeModal() {
+  document.getElementById("modalBg").classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("modalBg").addEventListener("click", function(e){ if(e.target===this) closeModal(); });
+
+function openLogin() { document.getElementById("loginOverlay").classList.add("open"); }
+function closeLogin() {
+  document.getElementById("loginOverlay").classList.remove("open");
+  document.getElementById("loginPass").value = "";
+  document.getElementById("loginErr").style.display = "none";
+}
+function doLogin() {
+  if (document.getElementById("loginPass").value === PASS) { closeLogin(); openAdmin(); }
+  else { document.getElementById("loginErr").style.display = "block"; document.getElementById("loginPass").value = ""; }
+}
+
+function openAdmin() {
+  renderAdminList();
+  document.getElementById("adminOverlay").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeAdmin() {
+  document.getElementById("adminOverlay").classList.remove("open");
+  document.body.style.overflow = "";
+  render();
+}
+
+function renderAdminList() {
+  var list = document.getElementById("adminList");
+  document.getElementById("watchCount").textContent = ALL.filter(function(w){ return w.status !== "borrado"; }).length;
+  var h = "";
+  ALL.forEach(function(w, i) {
+    if (w.status === "borrado") return;
+    h += "<div class=\"admin-item\">";
+    h += "<div class=\"admin-item-header\" onclick=\"toggleEdit("+i+")\">";
+    h += "<img src=\""+w.img+"\" alt=\"\">";
+    h += "<div class=\"admin-item-info\">";
+    h += "<div class=\"admin-item-model\">"+w.brand+" - "+w.model+"</div>";
+    h += "<div class=\"admin-item-price\">"+w.price+"</div>";
+    h += "</div>";
+    h += "<div class=\"admin-item-toggle\" id=\"tog-"+i+"\">v</div>";
+    h += "</div>";
+    h += "<div class=\"admin-edit-form\" id=\"ef-"+i+"\">";
+    h += "<div class=\"edit-row\">";
+    h += "<div class=\"field\"><label>Modelo</label><input type=\"text\" id=\"em-"+i+"\" value=\""+esc(w.model)+"\"></div>";
+    h += "<div class=\"field\"><label>Precio</label><input type=\"text\" id=\"ep-"+i+"\" value=\""+esc(w.price)+"\"></div>";
+    h += "</div>";
+    h += "<div class=\"field\"><label>Variante</label><input type=\"text\" id=\"ev-"+i+"\" value=\""+esc(w.variant)+"\"></div>";
+    h += "<div class=\"field\"><label>Descripcion</label><textarea id=\"ed-"+i+"\">"+esc(w.desc)+"</textarea></div>";
+    h += "<div class=\"field\"><label>Estado</label><select id=\"es-"+i+"\">";
+    h += "<option value=\"disponible\""+(w.status==="disponible"?" selected":"")+">Disponible</option>";
+    h += "<option value=\"vendido\""+(w.status==="vendido"?" selected":"")+">Vendido</option>";
+    h += "</select></div>";
+    h += "<div class=\"edit-actions\">";
+    h += "<button class=\"save-btn\" onclick=\"saveEdit("+i+")\">Guardar</button>";
+    if (i >= BUILT_IN.length) h += "<button class=\"del-btn\" onclick=\"delWatch("+i+")\">Borrar</button>";
+    h += "</div></div></div>";
+  });
+  list.innerHTML = h || "<p style=\"color:var(--gray);font-size:13px\">No hay relojes.</p>";
+}
+
+function esc(s){ return String(s||"").replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+function toggleEdit(i) {
+  var ef = document.getElementById("ef-"+i);
+  var tog = document.getElementById("tog-"+i);
+  var open = ef.classList.contains("open");
+  document.querySelectorAll(".admin-edit-form").forEach(function(el){ el.classList.remove("open"); });
+  document.querySelectorAll(".admin-item-toggle").forEach(function(el){ el.textContent="v"; });
+  if (!open) { ef.classList.add("open"); tog.textContent="^"; }
+}
+
+function saveEdit(i) {
+  ALL[i].model = document.getElementById("em-"+i).value.trim() || ALL[i].model;
+  ALL[i].variant = document.getElementById("ev-"+i).value.trim();
+  ALL[i].price = document.getElementById("ep-"+i).value.trim() || ALL[i].price;
+  ALL[i].desc = document.getElementById("ed-"+i).value.trim();
+  ALL[i].status = document.getElementById("es-"+i).value;
+  EXTRA = ALL.slice(BUILT_IN.length);
+  try { localStorage.setItem(SK, JSON.stringify(EXTRA)); } catch(e){}
+  renderAdminList();
+  toast("Guardado");
+}
+
+function delWatch(i) {
+  if (!confirm("Borrar "+ALL[i].model+"?")) return;
+  ALL[i].status = "borrado";
+  EXTRA = ALL.slice(BUILT_IN.length);
+  try { localStorage.setItem(SK, JSON.stringify(EXTRA)); } catch(e){}
+  renderAdminList();
+  toast("Reloj eliminado");
+}
+
+var newImgData = null;
+function previewNew(e) {
+  var file = e.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(ev) {
+    newImgData = ev.target.result;
+    document.getElementById("newPreview").style.display = "block";
+    document.getElementById("newPreviewImg").src = newImgData;
+  };
+  reader.readAsDataURL(file);
+}
+
+function addWatch() {
+  var model = document.getElementById("aModel").value.trim();
+  var brand = document.getElementById("aBrand").value;
+  var variant = document.getElementById("aVariant").value.trim();
+  var price = document.getElementById("aPrice").value.trim() || "$ 200.000";
+  var desc = document.getElementById("aDesc").value.trim();
+  if (!model) { toast("Escribi el nombre del modelo"); return; }
+  if (!newImgData) { toast("Agrega una foto del reloj"); return; }
+  var w = {brand:brand,model:model,variant:variant,price:price,desc:desc,status:"disponible",img:newImgData};
+  EXTRA.push(w);
+  ALL = BUILT_IN.concat(EXTRA);
+  try { localStorage.setItem(SK, JSON.stringify(EXTRA)); } catch(e){}
+  renderAdminList();
+  render();
+  toast("Reloj agregado");
+  document.getElementById("aModel").value="";
+  document.getElementById("aVariant").value="";
+  document.getElementById("aPrice").value="";
+  document.getElementById("aDesc").value="";
+  document.getElementById("aImg").value="";
+  document.getElementById("newPreview").style.display="none";
+  newImgData=null;
+}
+
+function toast(msg) {
+  var t=document.getElementById("toast");
+  t.textContent=msg;
+  t.classList.add("show");
+  setTimeout(function(){ t.classList.remove("show"); },2500);
+}
+
+render();
+</script>
+</body>
+</html>
