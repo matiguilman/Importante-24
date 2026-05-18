@@ -404,6 +404,15 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 }
 
 .cat-hidden { display: none !important; }
+
+/* SWIPE VIDEO */
+.card-media { overflow: hidden; position: relative; }
+.card-slides { display: flex; transition: transform 0.35s ease; }
+.card-slide { flex: 0 0 100%; }
+.card-vid { width: 100%; height: 220px; object-fit: cover; display: block; }
+.card-vid.aaa { height: 300px; }
+.swipe-hint { position: absolute; bottom: 10px; right: 12px; background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.75); font-size: 10px; font-weight: 600; padding: 4px 10px; border-radius: 20px; pointer-events: none; letter-spacing: 0.5px; }
+.swipe-hint.gone { display: none; }
 </style>
 </head>
 <body>
@@ -600,6 +609,7 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 "use strict";
 var CLD = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_800,c_fill,g_auto:subject,z_0.85,q_auto:best,f_auto/";
 var CLD_AAA = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/";
+var CLDV = "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/";
 var PASS = "24import2024";
 var WA = "5491162152890";
 var SK = "24import_extra_v2";
@@ -636,7 +646,7 @@ var BUILT_IN = [
   {brand:"Rolex",model:"Labelnoir Negro y Celeste",variant:"Esfera Negra y Celeste - Tourbillon Visible",price:"$ 200.000",status:"disponible",img:CLD+"70463405-f6b1-4149-8b5b-61d7b21f60cf_yvrtfh.jpg",desc:"Dos colorways del Labelnoir. Esfera negra o celeste. El tourbillon dorado gira visible. Movimiento automatico."},
   {brand:"Rolex",model:"Oyster Perpetual Candy",variant:"Esfera Menta Multicolor - Caja Acero",price:"$ 205.000",status:"disponible",img:CLD+"d25ec0cb-a733-4864-b191-1cb620997c4d_famhg0.jpg",desc:"La pieza mas audaz. Esfera verde menta con circulos de colores vibrantes. Para los que quieren un reloj que hable por si solo."},
   {brand:"Rolex",model:"Oyster Perpetual Candy Gold",variant:"Esfera Menta Multicolor - Caja Gold",price:"$ 225.000",status:"disponible",img:CLD+"cd706bff-be27-4faf-bd1d-6d23c425811d_crf0xv.jpg",desc:"La pieza mas audaz en version gold. Esfera verde menta con circulos de colores. Caja bañada en oro."},
-  {brand:"Rolex",model:"GMT-Master II Negro",variant:"Bisel Negro - Acero y Bicolor",price:"$ 230.000",status:"disponible",img:CLD+"b7e6cfb0-1989-4e69-9bb8-71f5f8c1febc_ivliq1.jpg",desc:"El reloj del viajero. Permite seguir dos husos horarios simultaneamente. Disponible en acero o bicolor."},
+  {brand:"Rolex",model:"GMT-Master II Negro",variant:"Bisel Negro - Acero y Bicolor",price:"$ 230.000",status:"disponible",img:CLD+"b7e6cfb0-1989-4e69-9bb8-71f5f8c1febc_ivliq1.jpg",desc:"El reloj del viajero. Permite seguir dos husos horarios simultaneamente. Disponible en acero o bicolor.",video:"WhatsApp_Video_2026-05-18_at_6.29.37_PM_e5xk9y"},
   {brand:"Rolex",model:"Daytona Rubber Gold",variant:"Esfera Verde y Negra - Correa Rubber Gold",price:"$ 215.000",status:"disponible",img:CLD+"099428a3-7726-4199-a80b-234c372fcaae_jd9wto.jpg",desc:"Caja bañada en oro con correa de goma negra. Disponible en esfera verde, negra o con diamantes."},
   {brand:"Rolex",model:"Submariner Gold",variant:"Esfera Champagne y Negra - Caja Gold",price:"$ 220.000",status:"disponible",img:CLD+"155a30e7-baef-42cb-a641-c980fb3f2d7d_ghq8lg.jpg",desc:"El Submariner en version lujosa. Caja y brazalete bañados en oro. Movimiento automatico, cristal de alta resistencia."},
   {brand:"Rolex",model:"Sky-Dweller Gold",variant:"Esfera Negra y Plateada - Full Gold",price:"$ 225.000",status:"disponible",img:CLD+"fdf7a0c1-1da6-4c7b-ac4e-540719945671_f8h6ji.jpg",desc:"El Sky-Dweller completamente bañado en oro. Esfera negra o plateada. Doble huso horario, movimiento automatico."},
@@ -678,7 +688,18 @@ function buildGrid(gridId, brand) {
     var topClass = brand === "Patek Philippe" ? " patek" : brand === "Cartier" ? " cartier" : "";
     h += "<div class=\"card\" onclick=\"openModal("+idx+")\">";
     var imgClass = brand === "Rolex AAA+" ? "card-img aaa" : "card-img";
-    h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
+    var vidClass = brand === "Rolex AAA+" ? "card-vid aaa" : "card-vid";
+    if (w.video) {
+      h += "<div class=\"card-media\">";
+      h += "<div class=\"card-slides\">";
+      h += "<div class=\"card-slide\"><img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\"></div>";
+      h += "<div class=\"card-slide\"><video class=\""+vidClass+"\" src=\""+CLDV+w.video+"\" muted loop playsinline preload=\"none\"></video></div>";
+      h += "</div>";
+      h += "<div class=\"swipe-hint\">&#8592; desliza para ver video</div>";
+      h += "</div>";
+    } else {
+      h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
+    }
     if (w.status === "vendido") h += "<div class=\"sold-badge\">VENDIDO</div>";
     h += "<div class=\"card-top"+topClass+"\"></div>";
     h += "<div class=\"card-info\">";
@@ -699,9 +720,44 @@ function render() {
   buildGrid("grid-rolex", "Rolex");
   buildGrid("grid-patek", "Patek Philippe");
   buildGrid("grid-cartier", "Cartier");
+  initCardSwipes();
+}
+
+function initCardSwipes() {
+  document.querySelectorAll(".card-media").forEach(function(media) {
+    var slides = media.querySelector(".card-slides");
+    var video = media.querySelector(".card-vid");
+    var hint = media.querySelector(".swipe-hint");
+    var swiped = false;
+    var startX = 0;
+    var dx = 0;
+    media.addEventListener("touchstart", function(e) {
+      startX = e.touches[0].clientX;
+      dx = 0;
+    }, {passive: true});
+    media.addEventListener("touchmove", function(e) {
+      dx = e.touches[0].clientX - startX;
+    }, {passive: true});
+    media.addEventListener("touchend", function(e) {
+      if (Math.abs(dx) > 40) {
+        _didSwipe = true;
+        if (dx < 0 && !swiped) {
+          slides.style.transform = "translateX(-100%)";
+          video.play();
+          swiped = true;
+          if (hint) hint.classList.add("gone");
+        } else if (dx > 0 && swiped) {
+          slides.style.transform = "translateX(0)";
+          video.pause();
+          swiped = false;
+        }
+      }
+    });
+  });
 }
 
 function openModal(i) {
+  if (_didSwipe) { _didSwipe = false; return; }
   var w = ALL[i];
   var bc = {"Rolex":"linear-gradient(90deg,#9A7A2E,#E8C96A)","Patek Philippe":"linear-gradient(90deg,#3B5998,#6495ED)","Cartier":"linear-gradient(90deg,#991B1B,#EF4444)"};
   document.getElementById("mImg").src = w.img;
@@ -809,6 +865,8 @@ function delWatch(i) {
   renderAdminList();
   toast("Reloj eliminado");
 }
+
+var _didSwipe = false;
 
 var newImgData = null;
 function previewNew(e) {
