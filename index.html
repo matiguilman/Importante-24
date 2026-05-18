@@ -409,10 +409,11 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 .card-media { overflow: hidden; position: relative; }
 .card-slides { display: flex; transition: transform 0.35s ease; }
 .card-slide { flex: 0 0 100%; }
-.card-vid { width: 100%; height: 220px; object-fit: cover; display: block; }
+.card-vid { width: 100%; height: 220px; object-fit: contain; background: #161616; display: block; }
 .card-vid.aaa { height: 300px; }
-.swipe-hint { position: absolute; bottom: 10px; right: 12px; background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.75); font-size: 10px; font-weight: 600; padding: 4px 10px; border-radius: 20px; pointer-events: none; letter-spacing: 0.5px; }
-.swipe-hint.gone { display: none; }
+.swipe-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 7px; z-index: 2; }
+.swipe-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.35); transition: background 0.3s, transform 0.3s; }
+.swipe-dot.active { background: var(--gold); transform: scale(1.2); }
 </style>
 </head>
 <body>
@@ -695,7 +696,7 @@ function buildGrid(gridId, brand) {
       h += "<div class=\"card-slide\"><img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\"></div>";
       h += "<div class=\"card-slide\"><video class=\""+vidClass+"\" src=\""+CLDV+w.video+"\" muted loop playsinline preload=\"none\"></video></div>";
       h += "</div>";
-      h += "<div class=\"swipe-hint\">&#8592; desliza para ver video</div>";
+      h += "<div class=\"swipe-dots\"><div class=\"swipe-dot active\"></div><div class=\"swipe-dot\"></div></div>";
       h += "</div>";
     } else {
       h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
@@ -727,7 +728,7 @@ function initCardSwipes() {
   document.querySelectorAll(".card-media").forEach(function(media) {
     var slides = media.querySelector(".card-slides");
     var video = media.querySelector(".card-vid");
-    var hint = media.querySelector(".swipe-hint");
+    var dots = media.querySelectorAll(".swipe-dot");
     var swiped = false;
     var startX = 0;
     var dx = 0;
@@ -739,17 +740,20 @@ function initCardSwipes() {
       dx = e.touches[0].clientX - startX;
     }, {passive: true});
     media.addEventListener("touchend", function(e) {
-      if (Math.abs(dx) > 40) {
+      if (Math.abs(dx) > 20) {
         _didSwipe = true;
         if (dx < 0 && !swiped) {
           slides.style.transform = "translateX(-100%)";
           video.play();
           swiped = true;
-          if (hint) hint.classList.add("gone");
+          if (dots[0]) { dots[0].classList.remove("active"); }
+          if (dots[1]) { dots[1].classList.add("active"); }
         } else if (dx > 0 && swiped) {
           slides.style.transform = "translateX(0)";
           video.pause();
           swiped = false;
+          if (dots[0]) { dots[0].classList.add("active"); }
+          if (dots[1]) { dots[1].classList.remove("active"); }
         }
       }
     });
