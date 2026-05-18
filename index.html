@@ -41,6 +41,7 @@ header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-b
 .card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s;position:relative}
 .card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 32px rgba(0,0,0,0.5)}
 .card-img{width:100%;height:220px;object-fit:cover;object-position:center center;display:block;transition:transform 0.3s}
+.card-img.aaa{height:300px}
 .card:hover .card-img{transform:scale(1.04)}
 .card-top{height:3px;background:linear-gradient(90deg,#9A7A2E,var(--gold2))}
 .card-top.patek{background:linear-gradient(90deg,#3B5998,#6495ED)}
@@ -596,35 +597,37 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 <div class="toast" id="toast"></div>
 
 <script>
+"use strict";
 var CLD = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_800,c_fill,g_auto:subject,z_0.85,q_auto:best,f_auto/";
+var CLD_AAA = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/";
 var PASS = "24import2024";
 var WA = "5491162152890";
 var SK = "24import_extra_v2";
 
 var BUILT_IN = [
-  {brand:"Rolex AAA+",model:"Datejust Azul Bicolor",variant:"Esfera Azul - Acero y Gold",price:"$ 162.000",status:"disponible",img:CLD+"Claid_2ccee15e264f43cdb241196cc053c287_gnftjy.jpg",desc:"Datejust con esfera azul vibrante y caja bicolor acero/gold. Bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Datejust Rojo Diamantes",variant:"Esfera Roja con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD+"Claid_2b5bc304252847b8b18c2cf3b14d5de9_agmleg.jpg",desc:"Datejust con esfera roja sunray y diamantes. Caja de acero, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Azul Diamantes",variant:"Esfera Azul con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD+"Claid_173195a2c7d049d5a51627fe2fb93467_jwtfsl.jpg",desc:"Day-Date con esfera azul y diamantes. Caja de acero, brazalete President."},
-  {brand:"Rolex AAA+",model:"Datejust Plateado Diamantes",variant:"Esfera Plateada con Diamantes - Caja Acero",price:"$ 162.000",status:"disponible",img:CLD+"Claid_daf026db1ebf47c4a66079f2c779a656_xoj3eu.jpg",desc:"Datejust con esfera plateada y diamantes. Caja de acero, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Plateado Bicolor",variant:"Esfera Plateada - Acero y Gold",price:"$ 155.000",status:"disponible",img:CLD+"Claid_35d6b3e5743846188096d3513650b5a3_v5etcu.jpg",desc:"Day-Date bicolor con esfera plateada. Brazalete President, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Acero",variant:"Esfera Negra con Diamantes - Caja Acero",price:"$ 152.000",status:"disponible",img:CLD+"Claid_081a587096aa424db1e7826efd88dea1_iu2ifn.jpg",desc:"Datejust con esfera negra y diamantes. Caja de acero, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Plateado Gold",variant:"Esfera Plateada - Caja Gold",price:"$ 152.000",status:"disponible",img:CLD+"Claid_8c8b611ec1f44be890b6afc25fff6d79_dg1dxn.jpg",desc:"Day-Date completamente bañado en oro con esfera plateada. Brazalete President."},
-  {brand:"Rolex AAA+",model:"Datejust Verde Diamantes",variant:"Esfera Verde con Diamantes - Acero y Gold",price:"$ 152.000",status:"disponible",img:CLD+"Claid_55b32299887941bfa5584b0d5bd96dde_imkqvx.jpg",desc:"Datejust con esfera verde vibrante y diamantes. Caja bicolor acero/gold."},
-  {brand:"Rolex AAA+",model:"Day-Date Verde Gold",variant:"Esfera Verde - Caja Full Gold",price:"$ 162.000",status:"disponible",img:CLD+"Claid_785e268555b544fab3cb1e51d7f856be_ppdche.jpg",desc:"Day-Date completamente bañado en oro con esfera verde brillante. President."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Acero II",variant:"Esfera Negra con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD+"Claid_cc96359c36d645d1bc77bafff9f0caf9_dw1xn1.jpg",desc:"Datejust con esfera negra y diamantes. Caja de acero, brazalete Oyster."},
-  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Bicolor",variant:"Esfera Azul con Diamantes - Acero y Gold",price:"$ 162.000",status:"disponible",img:CLD+"Claid_816dc3dcf7e14c4f8b6ac0b4df38a11c_jggta7.jpg",desc:"Datejust bicolor con esfera azul y diamantes. Brazalete Jubilee."},
-  {brand:"Rolex AAA+",model:"Datejust Plateado Diamantes Acero",variant:"Esfera Plateada con Diamantes - Caja Acero",price:"$ 162.000",status:"disponible",img:CLD+"Claid_7718e6b6c11e4bcb8365553a7b4c4a04_sxi6g6.jpg",desc:"Datejust con esfera plateada sunray y diamantes. Caja de acero."},
-  {brand:"Rolex AAA+",model:"Day-Date Azul Bicolor",variant:"Esfera Azul - Acero y Gold",price:"$ 160.000",status:"disponible",img:CLD+"Claid_3de21717e38e4bf8a660f797953a8365_gjmjm9.jpg",desc:"Day-Date bicolor con esfera azul. Brazalete President, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Azul Gold",variant:"Esfera Azul - Caja Full Gold",price:"$ 150.000",status:"disponible",img:CLD+"Claid_a7bb94922bee4510b3de1d52ee40e51d_l0iecz.jpg",desc:"Day-Date completamente bañado en oro con esfera azul. Brazalete President."},
-  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Gold",variant:"Esfera Azul con Diamantes - Caja Gold",price:"$ 160.000",status:"disponible",img:CLD+"Claid_c826a1fc4ccc49ceadfe1e2c876593a2_y8bs5o.jpg",desc:"Datejust bañado en oro con esfera azul y diamantes. Bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Datejust Purpura Gold",variant:"Esfera Purpura - Caja Gold",price:"$ 158.000",status:"disponible",img:CLD+"Claid_15d213bd2c3a418aa565072bc22267ca_tw6d5r.jpg",desc:"Datejust en oro con esfera purpura/violeta. Bisel acanalado, brazalete President."},
-  {brand:"Rolex AAA+",model:"Sky-Dweller Champagne Gold",variant:"Esfera Champagne - Caja Gold",price:"$ 150.000",status:"disponible",img:CLD+"Claid_3401fffea8444fb4bfcd4105f22c5bd6_d3qqv2.jpg",desc:"Sky-Dweller completamente bañado en oro con esfera champagne. Doble huso horario."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Bicolor",variant:"Esfera Negra con Diamantes - Acero y Gold",price:"$ 150.000",status:"disponible",img:CLD+"Claid_20a0463725194e19b023ec18b2f53abc_t4v7ts.jpg",desc:"Datejust bicolor con esfera negra y diamantes. Brazalete Jubilee."},
-  {brand:"Rolex AAA+",model:"Day-Date Champagne Gold",variant:"Esfera Champagne - Caja Full Gold",price:"$ 150.000",status:"disponible",img:CLD+"Claid_6aeecc1a723c4fd499f777974d04f4fd_pgoiwg.jpg",desc:"Day-Date completamente bañado en oro con esfera champagne. President."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Acero",variant:"Esfera Negra - Caja Acero",price:"$ 152.000",status:"disponible",img:CLD+"Claid_3f17f506033c4ce7852fe8b3e83339b5_rfvjzf.jpg",desc:"Datejust clasico con esfera negra. Caja de acero, brazalete Oyster, bisel liso."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Jubilee",variant:"Esfera Negra con Diamantes - Bicolor Jubilee",price:"$ 152.000",status:"disponible",img:CLD+"Claid_c73cbd830e1e4804bd4d29b82a79805f_r7rx8i.jpg",desc:"Datejust con esfera negra y diamantes. Brazalete Jubilee bicolor."},
-  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Aqua",variant:"Esfera Azul con Diamantes - Caja Acero",price:"$ 160.000",status:"disponible",img:CLD+"Claid_1f777da080954646b6d6afe66eb4b4ea_ismycj.jpg",desc:"Datejust con esfera azul brillante y diamantes. Caja de acero, bisel liso."},
-  {brand:"Rolex AAA+",model:"Datejust Aqua Diamantes Gold",variant:"Esfera Aqua con Diamantes - Caja Gold",price:"$ 160.000",status:"disponible",img:CLD+"Claid_bcfc92a61e44492396db340f63b0cf59_pa98ee.jpg",desc:"Datejust en oro con esfera celeste/aqua y diamantes. Bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Datejust Azul Bicolor",variant:"Esfera Azul - Acero y Gold",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_2ccee15e264f43cdb241196cc053c287_gnftjy.jpg",desc:"Datejust con esfera azul vibrante y caja bicolor acero/gold. Bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Datejust Rojo Diamantes",variant:"Esfera Roja con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_2b5bc304252847b8b18c2cf3b14d5de9_agmleg.jpg",desc:"Datejust con esfera roja sunray y diamantes. Caja de acero, bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Day-Date Azul Diamantes",variant:"Esfera Azul con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_173195a2c7d049d5a51627fe2fb93467_jwtfsl.jpg",desc:"Day-Date con esfera azul y diamantes. Caja de acero, brazalete President."},
+  {brand:"Rolex AAA+",model:"Datejust Plateado Diamantes",variant:"Esfera Plateada con Diamantes - Caja Acero",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_daf026db1ebf47c4a66079f2c779a656_xoj3eu.jpg",desc:"Datejust con esfera plateada y diamantes. Caja de acero, bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Day-Date Plateado Bicolor",variant:"Esfera Plateada - Acero y Gold",price:"$ 155.000",status:"disponible",img:CLD_AAA+"Claid_35d6b3e5743846188096d3513650b5a3_v5etcu.jpg",desc:"Day-Date bicolor con esfera plateada. Brazalete President, bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Acero",variant:"Esfera Negra con Diamantes - Caja Acero",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_081a587096aa424db1e7826efd88dea1_iu2ifn.jpg",desc:"Datejust con esfera negra y diamantes. Caja de acero, bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Day-Date Plateado Gold",variant:"Esfera Plateada - Caja Gold",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_8c8b611ec1f44be890b6afc25fff6d79_dg1dxn.jpg",desc:"Day-Date completamente bañado en oro con esfera plateada. Brazalete President."},
+  {brand:"Rolex AAA+",model:"Datejust Verde Diamantes",variant:"Esfera Verde con Diamantes - Acero y Gold",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_55b32299887941bfa5584b0d5bd96dde_imkqvx.jpg",desc:"Datejust con esfera verde vibrante y diamantes. Caja bicolor acero/gold."},
+  {brand:"Rolex AAA+",model:"Day-Date Verde Gold",variant:"Esfera Verde - Caja Full Gold",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_785e268555b544fab3cb1e51d7f856be_ppdche.jpg",desc:"Day-Date completamente bañado en oro con esfera verde brillante. President."},
+  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Acero II",variant:"Esfera Negra con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_cc96359c36d645d1bc77bafff9f0caf9_dw1xn1.jpg",desc:"Datejust con esfera negra y diamantes. Caja de acero, brazalete Oyster."},
+  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Bicolor",variant:"Esfera Azul con Diamantes - Acero y Gold",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_816dc3dcf7e14c4f8b6ac0b4df38a11c_jggta7.jpg",desc:"Datejust bicolor con esfera azul y diamantes. Brazalete Jubilee."},
+  {brand:"Rolex AAA+",model:"Datejust Plateado Diamantes Acero",variant:"Esfera Plateada con Diamantes - Caja Acero",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_7718e6b6c11e4bcb8365553a7b4c4a04_sxi6g6.jpg",desc:"Datejust con esfera plateada sunray y diamantes. Caja de acero."},
+  {brand:"Rolex AAA+",model:"Day-Date Azul Bicolor",variant:"Esfera Azul - Acero y Gold",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_3de21717e38e4bf8a660f797953a8365_gjmjm9.jpg",desc:"Day-Date bicolor con esfera azul. Brazalete President, bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Day-Date Azul Gold",variant:"Esfera Azul - Caja Full Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_a7bb94922bee4510b3de1d52ee40e51d_l0iecz.jpg",desc:"Day-Date completamente bañado en oro con esfera azul. Brazalete President."},
+  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Gold",variant:"Esfera Azul con Diamantes - Caja Gold",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_c826a1fc4ccc49ceadfe1e2c876593a2_y8bs5o.jpg",desc:"Datejust bañado en oro con esfera azul y diamantes. Bisel acanalado."},
+  {brand:"Rolex AAA+",model:"Datejust Purpura Gold",variant:"Esfera Purpura - Caja Gold",price:"$ 158.000",status:"disponible",img:CLD_AAA+"Claid_15d213bd2c3a418aa565072bc22267ca_tw6d5r.jpg",desc:"Datejust en oro con esfera purpura/violeta. Bisel acanalado, brazalete President."},
+  {brand:"Rolex AAA+",model:"Sky-Dweller Champagne Gold",variant:"Esfera Champagne - Caja Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_3401fffea8444fb4bfcd4105f22c5bd6_d3qqv2.jpg",desc:"Sky-Dweller completamente bañado en oro con esfera champagne. Doble huso horario."},
+  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Bicolor",variant:"Esfera Negra con Diamantes - Acero y Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_20a0463725194e19b023ec18b2f53abc_t4v7ts.jpg",desc:"Datejust bicolor con esfera negra y diamantes. Brazalete Jubilee."},
+  {brand:"Rolex AAA+",model:"Day-Date Champagne Gold",variant:"Esfera Champagne - Caja Full Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_6aeecc1a723c4fd499f777974d04f4fd_pgoiwg.jpg",desc:"Day-Date completamente bañado en oro con esfera champagne. President."},
+  {brand:"Rolex AAA+",model:"Datejust Negro Acero",variant:"Esfera Negra - Caja Acero",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_3f17f506033c4ce7852fe8b3e83339b5_rfvjzf.jpg",desc:"Datejust clasico con esfera negra. Caja de acero, brazalete Oyster, bisel liso."},
+  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Jubilee",variant:"Esfera Negra con Diamantes - Bicolor Jubilee",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_c73cbd830e1e4804bd4d29b82a79805f_r7rx8i.jpg",desc:"Datejust con esfera negra y diamantes. Brazalete Jubilee bicolor."},
+  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Aqua",variant:"Esfera Azul con Diamantes - Caja Acero",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_1f777da080954646b6d6afe66eb4b4ea_ismycj.jpg",desc:"Datejust con esfera azul brillante y diamantes. Caja de acero, bisel liso."},
+  {brand:"Rolex AAA+",model:"Datejust Aqua Diamantes Gold",variant:"Esfera Aqua con Diamantes - Caja Gold",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_bcfc92a61e44492396db340f63b0cf59_pa98ee.jpg",desc:"Datejust en oro con esfera celeste/aqua y diamantes. Bisel acanalado."},
   {brand:"Rolex",model:"Datejust Nacar y Negro",variant:"Esfera Nacar y Negra con Diamantes",price:"$ 210.000",status:"disponible",img:CLD+"d8f8a9d0-2bb0-408e-98de-dfa33c56606e_py7lon.jpg",desc:"Dos versiones del Datejust. Esfera nacar blanca o negra con diamantes. Brazalete Jubilee, movimiento automatico."},
   {brand:"Rolex",model:"Datejust Gold",variant:"Esfera Verde y Negra - Caja Full Gold",price:"$ 210.000",status:"disponible",img:CLD+"a4dba4dc-a453-44b7-988c-f3630c61afed_cqwlid.jpg",desc:"El Datejust completamente bañado en oro. Disponible en esfera verde o negra, ambas con bisel acanalado dorado y brazalete President. Movimiento automatico."},
   {brand:"Rolex",model:"GMT-Master II Pepsi",variant:"Bisel Rojo/Negro y Azul/Rojo",price:"$ 220.000",status:"disponible",img:CLD+"e8466473-6954-4381-9ff0-070214c62902_gx65p0.jpg",desc:"El mitico Pepsi. Bisel bicolor rojo y azul con escala de 24 horas. Movimiento automatico."},
@@ -674,7 +677,8 @@ function buildGrid(gridId, brand) {
     var idx = ALL.indexOf(w);
     var topClass = brand === "Patek Philippe" ? " patek" : brand === "Cartier" ? " cartier" : "";
     h += "<div class=\"card\" onclick=\"openModal("+idx+")\">";
-    h += "<img class=\"card-img\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
+    var imgClass = brand === "Rolex AAA+" ? "card-img aaa" : "card-img";
+    h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
     if (w.status === "vendido") h += "<div class=\"sold-badge\">VENDIDO</div>";
     h += "<div class=\"card-top"+topClass+"\"></div>";
     h += "<div class=\"card-info\">";
@@ -738,62 +742,6 @@ function openAdmin() {
 function closeAdmin() {
   document.getElementById("adminOverlay").classList.remove("open");
   document.body.style.overflow = "";
-  
-var currentFilter = "all";
-var currentSearch = "";
-
-function toggleSearch() {
-  document.getElementById("searchWrap").classList.toggle("open");
-  if (document.getElementById("searchWrap").classList.contains("open")) {
-    document.getElementById("searchInput").focus();
-  }
-}
-
-function filterBrand(btn, brand) {
-  currentFilter = brand;
-  document.querySelectorAll(".fbtn").forEach(function(b){ b.classList.remove("active"); });
-  btn.classList.add("active");
-  applyFilters();
-}
-
-function doSearch() {
-  currentSearch = document.getElementById("searchInput").value.toLowerCase().trim();
-  applyFilters();
-}
-
-function applyFilters() {
-  var sections = [
-    {brand:"Rolex AAA+", grid:"grid-rolex-aaa", parent:"Rolex"},
-    {brand:"Rolex", grid:"grid-rolex"},
-    {brand:"Patek Philippe", grid:"grid-patek"},
-    {brand:"Cartier", grid:"grid-cartier"}
-  ];
-  sections.forEach(function(s) {
-    var grid = document.getElementById(s.grid);
-    var header = grid.previousElementSibling;
-    var showBrand = (currentFilter === "all" || currentFilter === s.brand || currentFilter === s.parent);
-    var anyVisible = false;
-    if (showBrand) {
-      var cards = grid.querySelectorAll(".card");
-      cards.forEach(function(c) {
-        var txt = c.textContent.toLowerCase();
-        var matchSearch = !currentSearch || txt.indexOf(currentSearch) > -1;
-        if (matchSearch) { c.style.display = ""; anyVisible = true; }
-        else { c.style.display = "none"; }
-      });
-    }
-    if (showBrand && (anyVisible || !currentSearch)) {
-      grid.classList.remove("cat-hidden");
-      if (header && header.classList) header.classList.remove("cat-hidden");
-    } else {
-      grid.classList.add("cat-hidden");
-      if (header && header.classList) header.classList.add("cat-hidden");
-    }
-  });
-}
-
-
-render();
 }
 
 function renderAdminList() {
@@ -888,62 +836,7 @@ function addWatch() {
   ALL = BUILT_IN.concat(EXTRA);
   try { localStorage.setItem(SK, JSON.stringify(EXTRA)); } catch(e){}
   renderAdminList();
-  
-var currentFilter = "all";
-var currentSearch = "";
-
-function toggleSearch() {
-  document.getElementById("searchWrap").classList.toggle("open");
-  if (document.getElementById("searchWrap").classList.contains("open")) {
-    document.getElementById("searchInput").focus();
-  }
-}
-
-function filterBrand(btn, brand) {
-  currentFilter = brand;
-  document.querySelectorAll(".fbtn").forEach(function(b){ b.classList.remove("active"); });
-  btn.classList.add("active");
-  applyFilters();
-}
-
-function doSearch() {
-  currentSearch = document.getElementById("searchInput").value.toLowerCase().trim();
-  applyFilters();
-}
-
-function applyFilters() {
-  var sections = [
-    {brand:"Rolex AAA+", grid:"grid-rolex-aaa", parent:"Rolex"},
-    {brand:"Rolex", grid:"grid-rolex"},
-    {brand:"Patek Philippe", grid:"grid-patek"},
-    {brand:"Cartier", grid:"grid-cartier"}
-  ];
-  sections.forEach(function(s) {
-    var grid = document.getElementById(s.grid);
-    var header = grid.previousElementSibling;
-    var showBrand = (currentFilter === "all" || currentFilter === s.brand || currentFilter === s.parent);
-    var anyVisible = false;
-    if (showBrand) {
-      var cards = grid.querySelectorAll(".card");
-      cards.forEach(function(c) {
-        var txt = c.textContent.toLowerCase();
-        var matchSearch = !currentSearch || txt.indexOf(currentSearch) > -1;
-        if (matchSearch) { c.style.display = ""; anyVisible = true; }
-        else { c.style.display = "none"; }
-      });
-    }
-    if (showBrand && (anyVisible || !currentSearch)) {
-      grid.classList.remove("cat-hidden");
-      if (header && header.classList) header.classList.remove("cat-hidden");
-    } else {
-      grid.classList.add("cat-hidden");
-      if (header && header.classList) header.classList.add("cat-hidden");
-    }
-  });
-}
-
-
-render();
+  render();
   toast("Reloj agregado");
   document.getElementById("aModel").value="";
   document.getElementById("aVariant").value="";
