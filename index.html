@@ -135,6 +135,28 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--gold);color:var(--dark);padding:11px 22px;border-radius:8px;font-size:13px;font-weight:700;z-index:9999;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+/* TESTIMONIOS */
+.testimonios-section{background:linear-gradient(180deg,var(--dark) 0%,#0a0a0a 100%);padding:48px 0 56px;border-top:1px solid rgba(201,168,76,0.15)}
+.testimonios-head{text-align:center;padding:0 18px;margin-bottom:32px}
+.testimonios-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.testimonios-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,6vw,40px);font-weight:600;color:var(--white);line-height:1.15}
+.testimonios-title em{font-style:italic;color:var(--gold)}
+.testimonios-track{display:flex;gap:16px;overflow-x:auto;padding:4px 18px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.testimonios-track::-webkit-scrollbar{display:none}
+.tcard{flex:0 0 280px;background:var(--dark2);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:22px 20px 20px;scroll-snap-align:start;position:relative;transition:border-color 0.25s}
+.tcard::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9A7A2E,var(--gold2));border-radius:14px 14px 0 0}
+.tcard-stars{color:var(--gold);font-size:14px;letter-spacing:3px;margin-bottom:12px}
+.tcard-text{font-size:13px;color:var(--gray2);line-height:1.7;font-weight:300;margin-bottom:18px;font-style:italic}
+.tcard-text::before{content:"\201C";font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);opacity:0.4;line-height:0;vertical-align:-14px;margin-right:4px}
+.tcard-footer{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.07)}
+.tcard-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#9A7A2E,var(--gold2));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--dark);flex-shrink:0}
+.tcard-name{font-size:13px;font-weight:600;color:var(--white)}
+.tcard-loc{font-size:11px;color:var(--gray);margin-top:1px}
+.tcard-watch{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);padding:3px 9px;border-radius:20px;margin-top:6px}
+.testimonios-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}
+.tdot{width:6px;height:6px;border-radius:50%;background:rgba(201,168,76,0.25);transition:background 0.3s,transform 0.3s;cursor:pointer;border:none;padding:0}
+.tdot.active{background:var(--gold);transform:scale(1.3)}
+
 /* BRAND HEADERS */
 .brand-header {
   text-align: center;
@@ -559,6 +581,82 @@ a,button,.card,.fbtn,.search-toggle,.admin-btn,.hwa,.modal-close,.modal-wa,.floa
   </div>
   <div class="grid" id="grid-cartier"></div>
 </div>
+
+<section class="testimonios-section" id="testimonios">
+  <div class="testimonios-head">
+    <p class="testimonios-eye">Lo que dicen nuestros clientes</p>
+    <h2 class="testimonios-title">Mas de <em>500 relojes</em><br>entregados con exito</h2>
+  </div>
+  <div class="testimonios-track" id="tTrack">
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Llego en perfectas condiciones, rapido y bien embalado. La calidad es increible, no se diferencia en nada de uno original. Re recomendado.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">M</div>
+        <div>
+          <div class="tcard-name">Mateo R.</div>
+          <div class="tcard-loc">Buenos Aires</div>
+          <div class="tcard-watch">Rolex Submariner</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Compre contra entrega y fue todo muy transparente. El reloj es una joya, todos me preguntan donde lo compre. Ya pedi el segundo.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">S</div>
+        <div>
+          <div class="tcard-name">Santiago V.</div>
+          <div class="tcard-loc">GBA Norte</div>
+          <div class="tcard-watch">Rolex GMT-Master II</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Tenia dudas al principio pero la atencion fue excelente. Me mandaron fotos del reloj antes de enviarlo y llego en 48hs. Muy profesionales.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">V</div>
+        <div>
+          <div class="tcard-name">Valentina G.</div>
+          <div class="tcard-loc">Rosario</div>
+          <div class="tcard-watch">Patek Philippe Nautilus</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">El Daytona que compre es una pasada. Mecanismo suave, pesado, se ve caro. Lo use en una cena y la gente alucino. Vale cada peso.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">F</div>
+        <div>
+          <div class="tcard-name">Federico L.</div>
+          <div class="tcard-loc">Cordoba</div>
+          <div class="tcard-watch">Rolex Daytona</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Compre el Cartier Santos para regalo y fue un exito total. Lo empacaron re lindo, con caja y todo. La persona que lo recibio quedo enamorada.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">L</div>
+        <div>
+          <div class="tcard-name">Luciana M.</div>
+          <div class="tcard-loc">Buenos Aires</div>
+          <div class="tcard-watch">Cartier Santos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonios-dots" id="tDots">
+    <button class="tdot active" onclick="scrollTCard(0)"></button>
+    <button class="tdot" onclick="scrollTCard(1)"></button>
+    <button class="tdot" onclick="scrollTCard(2)"></button>
+    <button class="tdot" onclick="scrollTCard(3)"></button>
+    <button class="tdot" onclick="scrollTCard(4)"></button>
+  </div>
+</section>
 
 <footer>
   <a href="#" class="logo">24<span>Import</span></a>
@@ -1018,6 +1116,29 @@ function toast(msg) {
 
 var currentFilter = "all";
 var currentSearch = "";
+
+function scrollTCard(idx) {
+  var track = document.getElementById("tTrack");
+  var cards = track.querySelectorAll(".tcard");
+  if (!cards[idx]) return;
+  track.scrollTo({ left: cards[idx].offsetLeft - 18, behavior: "smooth" });
+  document.querySelectorAll(".tdot").forEach(function(d,i){ d.classList.toggle("active", i===idx); });
+}
+(function() {
+  var track = document.getElementById("tTrack");
+  if (!track) return;
+  track.addEventListener("scroll", function() {
+    var cards = track.querySelectorAll(".tcard");
+    var scrollLeft = track.scrollLeft;
+    var closest = 0;
+    var minDist = Infinity;
+    cards.forEach(function(c, i) {
+      var dist = Math.abs(c.offsetLeft - 18 - scrollLeft);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    document.querySelectorAll(".tdot").forEach(function(d,i){ d.classList.toggle("active", i===closest); });
+  }, { passive: true });
+})();
 
 function toggleSearch() {
   document.getElementById("searchWrap").classList.toggle("open");
