@@ -928,15 +928,13 @@ function openModal(i) {
   document.getElementById("mVariant").textContent = w.variant;
   document.getElementById("mDesc").textContent = w.desc;
   document.getElementById("mPrice").textContent = w.price;
-  var imgFile = w.img.split("/upload/")[1].split("/").pop();
-  var shortImg = "https://res.cloudinary.com/dt1lodc8c/image/upload/q_auto/" + imgFile;
   var msg = encodeURIComponent(
     "Hola! Vi el catalogo de 24Import y me interesa este reloj:\n\n" +
     "*" + w.brand + " — " + w.model + "*\n" +
     w.variant + "\n" +
     w.price + "\n\n" +
     "Lo tenes disponible?\n\n" +
-    shortImg
+    w.img
   );
   document.getElementById("mWa").href = "https://wa.me/"+WA+"?text="+msg;
   var slidesInner = document.getElementById("mSlidesInner");
