@@ -507,9 +507,12 @@ a,button,.card,.fbtn,.search-toggle,.admin-btn,.hwa,.modal-close,.modal-wa,.floa
 .card-slides { display: flex; transition: transform 0.35s ease; }
 .card-slide { flex: 0 0 100%; }
 .card-vid { width: 100%; height: 300px; object-fit: contain; background: #161616; display: block; }
-.swipe-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 7px; z-index: 2; }
-.swipe-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.35); transition: background 0.3s, transform 0.3s; }
-.swipe-dot.active { background: var(--gold); transform: scale(1.2); }
+.swipe-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 2; }
+.swipe-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); transition: background 0.3s, transform 0.3s; }
+.swipe-dot.active { background: var(--gold); transform: scale(1.3); }
+.swipe-hint { position: absolute; left: 10px; bottom: 28px; z-index: 3; background: rgba(0,0,0,0.72); backdrop-filter: blur(6px); color: #fff; border-radius: 20px; padding: 5px 11px 5px 8px; font-size: 11px; font-weight: 600; display: flex; align-items: center; gap: 5px; pointer-events: none; animation: hintSlide 1.8s ease-in-out infinite; }
+.swipe-hint.gone { display: none; }
+@keyframes hintSlide { 0%,100%{ opacity:1; transform:translateX(0); } 50%{ opacity:0.6; transform:translateX(-5px); } }
 </style>
 </head>
 <body>
@@ -972,6 +975,7 @@ function buildGrid(gridId, brand) {
       h += "<div class=\"card-slide\"><video class=\""+vidClass+"\" src=\""+CLDV+w.video+"\" muted loop playsinline preload=\"none\"></video></div>";
       h += "</div>";
       h += "<div class=\"swipe-dots\"><div class=\"swipe-dot active\"></div><div class=\"swipe-dot\"></div></div>";
+      h += "<div class=\"swipe-hint\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"white\"><path d=\"M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z\"/></svg>ver video</div>";
       h += "</div>";
     } else {
       h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
@@ -1005,14 +1009,21 @@ function initCardSwipes() {
     var slides = media.querySelector(".card-slides");
     var video = media.querySelector(".card-vid");
     var dots = media.querySelectorAll(".swipe-dot");
+    var hint = media.querySelector(".swipe-hint");
     var swiped = false;
     var startX = 0;
     var dx = 0;
+    var autoTimer = null;
+    var userTouched = false;
 
+    function hideHint() {
+      if (hint) { hint.classList.add("gone"); }
+    }
     function goVideo() {
       slides.style.transform = "translateX(-100%)";
       video.play();
       swiped = true;
+      hideHint();
       if (dots[0]) { dots[0].classList.remove("active"); }
       if (dots[1]) { dots[1].classList.add("active"); }
     }
@@ -1023,11 +1034,28 @@ function initCardSwipes() {
       if (dots[0]) { dots[0].classList.add("active"); }
       if (dots[1]) { dots[1].classList.remove("active"); }
     }
+    function scheduleAuto() {
+      clearTimeout(autoTimer);
+      autoTimer = setTimeout(function() {
+        if (!userTouched) {
+          if (!swiped) {
+            goVideo();
+            autoTimer = setTimeout(function() {
+              if (!userTouched) { goImage(); scheduleAuto(); }
+            }, 5000);
+          }
+        }
+      }, 4500);
+    }
 
-    if (dots[0]) { dots[0].addEventListener("click", function(e) { e.stopPropagation(); goImage(); }); }
-    if (dots[1]) { dots[1].addEventListener("click", function(e) { e.stopPropagation(); goVideo(); }); }
+    scheduleAuto();
+
+    if (dots[0]) { dots[0].addEventListener("click", function(e) { e.stopPropagation(); userTouched = true; clearTimeout(autoTimer); goImage(); }); }
+    if (dots[1]) { dots[1].addEventListener("click", function(e) { e.stopPropagation(); userTouched = true; clearTimeout(autoTimer); goVideo(); }); }
 
     media.addEventListener("touchstart", function(e) {
+      userTouched = true;
+      clearTimeout(autoTimer);
       startX = e.touches[0].clientX;
       dx = 0;
     }, {passive: true});
