@@ -1009,11 +1009,13 @@ function initCardSwipes() {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         var vid = entry.target.querySelector(".card-vid");
-        if (vid) { vid.preload = "auto"; vid.load(); }
+        if (vid && vid.getAttribute("preload") !== "auto") {
+          vid.setAttribute("preload", "auto");
+        }
         vidObserver.unobserve(entry.target);
       }
     });
-  }, { rootMargin: "500px 0px" }) : null;
+  }, { rootMargin: "400px 0px" }) : null;
 
   document.querySelectorAll(".card-media").forEach(function(media) {
     if (vidObserver) { vidObserver.observe(media); }
@@ -1032,7 +1034,8 @@ function initCardSwipes() {
     }
     function goVideo() {
       slides.style.transform = "translateX(-100%)";
-      video.play();
+      var p = video.play();
+      if (p && p.catch) { p.catch(function(){}); }
       swiped = true;
       hideHint();
       if (dots[0]) { dots[0].classList.remove("active"); }
