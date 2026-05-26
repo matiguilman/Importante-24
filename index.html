@@ -972,7 +972,7 @@ function buildGrid(gridId, brand) {
       h += "<div class=\"card-media\">";
       h += "<div class=\"card-slides\">";
       h += "<div class=\"card-slide\"><img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\"></div>";
-      h += "<div class=\"card-slide\"><video class=\""+vidClass+"\" src=\""+CLDV+w.video+"\" muted loop playsinline preload=\"metadata\"></video></div>";
+      h += "<div class=\"card-slide\"><video class=\""+vidClass+"\" src=\""+CLDV+w.video+"\" muted loop playsinline preload=\"none\"></video></div>";
       h += "</div>";
       h += "<div class=\"swipe-dots\"><div class=\"swipe-dot active\"></div><div class=\"swipe-dot\"></div></div>";
       h += "<div class=\"swipe-hint\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"white\"><path d=\"M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z\"/></svg>ver video</div>";
@@ -1026,8 +1026,6 @@ function initCardSwipes() {
     var swiped = false;
     var startX = 0;
     var dx = 0;
-    var autoTimer = null;
-    var userTouched = false;
 
     function hideHint() {
       if (hint) { hint.classList.add("gone"); }
@@ -1048,28 +1046,11 @@ function initCardSwipes() {
       if (dots[0]) { dots[0].classList.add("active"); }
       if (dots[1]) { dots[1].classList.remove("active"); }
     }
-    function scheduleAuto() {
-      clearTimeout(autoTimer);
-      autoTimer = setTimeout(function() {
-        if (!userTouched) {
-          if (!swiped) {
-            goVideo();
-            autoTimer = setTimeout(function() {
-              if (!userTouched) { goImage(); scheduleAuto(); }
-            }, 5000);
-          }
-        }
-      }, 4500);
-    }
 
-    scheduleAuto();
-
-    if (dots[0]) { dots[0].addEventListener("click", function(e) { e.stopPropagation(); userTouched = true; clearTimeout(autoTimer); goImage(); }); }
-    if (dots[1]) { dots[1].addEventListener("click", function(e) { e.stopPropagation(); userTouched = true; clearTimeout(autoTimer); goVideo(); }); }
+    if (dots[0]) { dots[0].addEventListener("click", function(e) { e.stopPropagation(); goImage(); }); }
+    if (dots[1]) { dots[1].addEventListener("click", function(e) { e.stopPropagation(); goVideo(); }); }
 
     media.addEventListener("touchstart", function(e) {
-      userTouched = true;
-      clearTimeout(autoTimer);
       startX = e.touches[0].clientX;
       dx = 0;
     }, {passive: true});
