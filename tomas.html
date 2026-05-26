@@ -2,15 +2,19 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0D0D0D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://res.cloudinary.com">
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wtat3h81x7");</script>
 <title>24Import — Relojes de Alta Gama</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wtat3h81x7");</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--gold:#C9A84C;--gold2:#E8C96A;--dark:#0D0D0D;--dark2:#161616;--dark3:#1E1E1E;--white:#F9F7F2;--gray:#8A8A8A;--gray2:#C8C8C8;--border:rgba(201,168,76,0.25);--green:#25D366;--red:#DC2626}
-body{font-family:'Jost',sans-serif;background:var(--dark);color:var(--white)}
-header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-bottom:1px solid var(--border);padding:0 18px;display:flex;align-items:center;justify-content:space-between;height:64px}
+body{font-family:'Jost',sans-serif;background:var(--dark);color:var(--white);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overscroll-behavior-y:none}
+header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-bottom:1px solid var(--border);padding:0 18px;padding-top:env(safe-area-inset-top);padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right));display:flex;align-items:center;justify-content:space-between;height:calc(64px + env(safe-area-inset-top))}
 .logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--gold);letter-spacing:2px;text-decoration:none}
 .logo span{color:var(--white);font-weight:400}
 .header-right{display:flex;align-items:center;gap:10px}
@@ -41,8 +45,7 @@ header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-b
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;margin-bottom:48px}
 .card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:transform 0.25s,border-color 0.25s,box-shadow 0.25s;position:relative}
 .card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 32px rgba(0,0,0,0.5)}
-.card-img{width:100%;height:220px;object-fit:cover;object-position:center center;display:block;transition:transform 0.3s}
-.card-img.aaa{height:300px}
+.card-img{width:100%;height:300px;object-fit:cover;object-position:center center;display:block;transition:transform 0.3s;filter:brightness(0.78) contrast(0.92)}
 .card:hover .card-img{transform:scale(1.04)}
 .card-top{height:3px;background:linear-gradient(90deg,#9A7A2E,var(--gold2))}
 .card-top.patek{background:linear-gradient(90deg,#3B5998,#6495ED)}
@@ -59,7 +62,14 @@ header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-b
 .modal-bg.open{display:block}
 .modal{background:var(--dark2);border:1px solid rgba(201,168,76,0.3);border-radius:16px;width:100%;max-width:500px;margin:0 auto;overflow:hidden;animation:mIn 0.25s ease}
 @keyframes mIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.modal-media-wrap{position:relative;overflow:hidden}
+.modal-slides-inner{display:flex;transition:transform 0.35s ease}
+.modal-slide{flex:0 0 100%}
 .modal-img{width:100%;height:280px;object-fit:cover;object-position:center center;display:block}
+.modal-vid{width:100%;height:280px;object-fit:contain;background:#161616;display:block}
+.modal-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:2}
+.modal-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);transition:background 0.3s,transform 0.3s;cursor:pointer}
+.modal-dot.active{background:var(--gold);transform:scale(1.2)}
 .modal-gold{height:3px;background:linear-gradient(90deg,#9A7A2E,var(--gold2))}
 .modal-body{padding:22px}
 .modal-brand{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gray);margin-bottom:6px}
@@ -117,13 +127,35 @@ header{position:sticky;top:0;z-index:200;background:rgba(13,13,13,0.97);border-b
 .edit-actions{display:flex;gap:8px;margin-top:12px}
 .save-btn{flex:1;background:var(--gold);color:var(--dark);border:none;padding:11px;border-radius:8px;font-family:'Jost',sans-serif;font-size:13px;font-weight:700;cursor:pointer}
 .del-btn{background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.4);color:var(--red);padding:11px 16px;border-radius:8px;font-family:'Jost',sans-serif;font-size:13px;cursor:pointer}
-.float{position:fixed;bottom:20px;right:20px;z-index:999;background:var(--green);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.4)}
-footer{background:#080808;border-top:1px solid var(--border);padding:28px 18px;text-align:center}
+.float{position:fixed;bottom:max(20px,calc(16px + env(safe-area-inset-bottom)));right:max(20px,env(safe-area-inset-right));z-index:999;background:var(--green);width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,0.4)}
+footer{background:#080808;border-top:1px solid var(--border);padding:28px 18px;padding-bottom:max(28px,calc(20px + env(safe-area-inset-bottom)));text-align:center}
 footer .logo{font-size:20px;display:block;margin-bottom:8px}
 .ft{font-size:11px;color:var(--gray);line-height:1.9}
 .ft a{color:var(--gold);text-decoration:none}
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--gold);color:var(--dark);padding:11px 22px;border-radius:8px;font-size:13px;font-weight:700;z-index:9999;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* TESTIMONIOS */
+.testimonios-section{background:linear-gradient(180deg,var(--dark) 0%,#0a0a0a 100%);padding:48px 0 56px;border-top:1px solid rgba(201,168,76,0.15)}
+.testimonios-head{text-align:center;padding:0 18px;margin-bottom:32px}
+.testimonios-eye{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.testimonios-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,6vw,40px);font-weight:600;color:var(--white);line-height:1.15}
+.testimonios-title em{font-style:italic;color:var(--gold)}
+.testimonios-track{display:flex;gap:16px;overflow-x:auto;padding:4px 18px 16px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.testimonios-track::-webkit-scrollbar{display:none}
+.tcard{flex:0 0 280px;background:var(--dark2);border:1px solid rgba(201,168,76,0.2);border-radius:14px;padding:22px 20px 20px;scroll-snap-align:start;position:relative;transition:border-color 0.25s}
+.tcard::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#9A7A2E,var(--gold2));border-radius:14px 14px 0 0}
+.tcard-stars{color:var(--gold);font-size:14px;letter-spacing:3px;margin-bottom:12px}
+.tcard-text{font-size:13px;color:var(--gray2);line-height:1.7;font-weight:300;margin-bottom:18px;font-style:italic}
+.tcard-text::before{content:"\201C";font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--gold);opacity:0.4;line-height:0;vertical-align:-14px;margin-right:4px}
+.tcard-footer{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.07)}
+.tcard-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#9A7A2E,var(--gold2));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;color:var(--dark);flex-shrink:0}
+.tcard-name{font-size:13px;font-weight:600;color:var(--white)}
+.tcard-loc{font-size:11px;color:var(--gray);margin-top:1px}
+.tcard-watch{display:inline-block;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);padding:3px 9px;border-radius:20px;margin-top:6px}
+.testimonios-dots{display:flex;justify-content:center;gap:7px;margin-top:4px}
+.tdot{width:6px;height:6px;border-radius:50%;background:rgba(201,168,76,0.25);transition:background 0.3s,transform 0.3s;cursor:pointer;border:none;padding:0}
+.tdot.active{background:var(--gold);transform:scale(1.3)}
 
 /* BRAND HEADERS */
 .brand-header {
@@ -272,6 +304,38 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 .brand-divider-cartier { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #DC2626, transparent); margin: 10px auto; }
 .brand-cat-cartier { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 6px; color: #F9F7F2; text-transform: uppercase; margin-bottom: 10px; }
 
+/* TAG HEUER */
+.brand-tag {
+  background: linear-gradient(135deg, #080808 0%, #0f0d0d 50%, #080808 100%);
+  border: 1px solid rgba(227,6,19,0.35);
+}
+.brand-tag::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E30613, #FF4444, #E30613, transparent);
+}
+.brand-tag::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #E30613, #FF4444, #E30613, transparent);
+}
+.brand-name-tag {
+  font-family: 'Jost', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  color: #FF4444;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.brand-divider-tag { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #E30613, transparent); margin: 10px auto; }
+.brand-cat-tag { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 6px; color: #F9F7F2; text-transform: uppercase; margin-bottom: 10px; }
+.brand-sub-tag { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 4px; color: rgba(227,6,19,0.5); text-transform: uppercase; }
+
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -305,7 +369,7 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 /* FILTER BAR */
 .filter-bar {
   position: sticky;
-  top: 64px;
+  top: calc(64px + env(safe-area-inset-top));
   z-index: 150;
   background: rgba(13,13,13,0.95);
   backdrop-filter: blur(10px);
@@ -336,6 +400,7 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
   overflow-x: auto;
   flex: 1;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 }
 .filter-buttons::-webkit-scrollbar { display: none; }
 .fbtn {
@@ -405,6 +470,49 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 }
 
 .cat-hidden { display: none !important; }
+
+/* ── MOBILE OPTIMIZATIONS ── */
+
+/* Quita el delay de 300ms y el flash azul al tocar */
+a,button,.card,.fbtn,.search-toggle,.admin-btn,.hwa,.modal-close,.modal-wa,.float,.login-btn,.login-cancel,.add-btn,.save-btn,.del-btn,.admin-close{
+  -webkit-tap-highlight-color:transparent;
+  touch-action:manipulation;
+}
+
+/* Sin selección de texto en elementos interactivos */
+.card,button,.fbtn,.logo,.brand-header{
+  user-select:none;
+  -webkit-user-select:none;
+}
+
+/* Inputs a 16px — evita que iOS haga zoom al enfocar */
+.field input,.field textarea,.field select,
+.login-input,.search-wrap input{font-size:16px !important}
+
+/* Active states táctiles (en lugar de hover) */
+@media (hover:none){
+  .card:hover{transform:none;border-color:var(--border);box-shadow:none}
+  .card:active{transform:scale(0.985);border-color:rgba(201,168,76,0.5);transition:transform 0.1s,border-color 0.1s}
+  .fbtn:hover{border-color:rgba(201,168,76,0.3);color:var(--gray2)}
+  .fbtn:active{background:rgba(201,168,76,0.12)}
+  .hwa:active,.float:active{opacity:0.85}
+  .modal-wa:active{opacity:0.85}
+}
+
+/* Overscroll contenido del modal */
+.modal-bg.open{overscroll-behavior:contain}
+
+/* SWIPE VIDEO */
+.card-media { overflow: hidden; position: relative; }
+.card-slides { display: flex; transition: transform 0.35s ease; }
+.card-slide { flex: 0 0 100%; }
+.card-vid { width: 100%; height: 300px; object-fit: contain; background: #161616; display: block; }
+.swipe-dots { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 2; }
+.swipe-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4); transition: background 0.3s, transform 0.3s; }
+.swipe-dot.active { background: var(--gold); transform: scale(1.3); }
+.swipe-hint { position: absolute; left: 10px; bottom: 28px; z-index: 3; background: rgba(0,0,0,0.72); backdrop-filter: blur(6px); color: #fff; border-radius: 20px; padding: 5px 11px 5px 8px; font-size: 11px; font-weight: 600; display: flex; align-items: center; gap: 5px; pointer-events: none; animation: hintSlide 1.8s ease-in-out infinite; }
+.swipe-hint.gone { display: none; }
+@keyframes hintSlide { 0%,100%{ opacity:1; transform:translateX(0); } 50%{ opacity:0.6; transform:translateX(-5px); } }
 </style>
 </head>
 <body>
@@ -459,6 +567,7 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
     <button class="fbtn" onclick="filterBrand(this, 'Rolex')">Rolex</button>
     <button class="fbtn" onclick="filterBrand(this, 'Patek Philippe')">Patek</button>
     <button class="fbtn" onclick="filterBrand(this, 'Cartier')">Cartier</button>
+    <button class="fbtn" onclick="filterBrand(this, 'Tag Heuer')">Tag Heuer</button>
   </div>
 </div>
 <div class="search-wrap" id="searchWrap">
@@ -507,12 +616,96 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
     <div class="brand-sub-cartier">PARIS &nbsp;·&nbsp; FONDÉE EN 1847</div>
   </div>
   <div class="grid" id="grid-cartier"></div>
+
+  <div class="brand-header brand-tag">
+    <div class="brand-name-tag">TAG Heuer</div>
+    <div class="brand-divider-tag"></div>
+    <div class="brand-cat-tag">Sport Chronographes</div>
+    <div class="brand-sub-tag">La Chaux-de-Fonds &nbsp;·&nbsp; Fondee en 1860</div>
+  </div>
+  <div class="grid" id="grid-tag"></div>
 </div>
+
+<section class="testimonios-section" id="testimonios">
+  <div class="testimonios-head">
+    <p class="testimonios-eye">Lo que dicen nuestros clientes</p>
+    <h2 class="testimonios-title">Mas de <em>500 relojes</em><br>entregados con exito</h2>
+  </div>
+  <div class="testimonios-track" id="tTrack">
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Llego en perfectas condiciones, rapido y bien embalado. La calidad es increible, no se diferencia en nada de uno original. Re recomendado.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">M</div>
+        <div>
+          <div class="tcard-name">Mateo R.</div>
+          <div class="tcard-loc">Buenos Aires</div>
+          <div class="tcard-watch">Rolex Submariner</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Compre contra entrega y fue todo muy transparente. El reloj es una joya, todos me preguntan donde lo compre. Ya pedi el segundo.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">S</div>
+        <div>
+          <div class="tcard-name">Santiago V.</div>
+          <div class="tcard-loc">GBA Norte</div>
+          <div class="tcard-watch">Rolex GMT-Master II</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Tenia dudas al principio pero la atencion fue excelente. Me mandaron fotos del reloj antes de enviarlo y llego en 48hs. Muy profesionales.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">V</div>
+        <div>
+          <div class="tcard-name">Valentina G.</div>
+          <div class="tcard-loc">Rosario</div>
+          <div class="tcard-watch">Patek Philippe Nautilus</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">El Daytona que compre es una pasada. Mecanismo suave, pesado, se ve caro. Lo use en una cena y la gente alucino. Vale cada peso.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">F</div>
+        <div>
+          <div class="tcard-name">Federico L.</div>
+          <div class="tcard-loc">Cordoba</div>
+          <div class="tcard-watch">Rolex Daytona</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">Compre el Cartier Santos para regalo y fue un exito total. Lo empacaron re lindo, con caja y todo. La persona que lo recibio quedo enamorada.</p>
+      <div class="tcard-footer">
+        <div class="tcard-avatar">L</div>
+        <div>
+          <div class="tcard-name">Luciana M.</div>
+          <div class="tcard-loc">Buenos Aires</div>
+          <div class="tcard-watch">Cartier Santos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonios-dots" id="tDots">
+    <button class="tdot active" onclick="scrollTCard(0)"></button>
+    <button class="tdot" onclick="scrollTCard(1)"></button>
+    <button class="tdot" onclick="scrollTCard(2)"></button>
+    <button class="tdot" onclick="scrollTCard(3)"></button>
+    <button class="tdot" onclick="scrollTCard(4)"></button>
+  </div>
+</section>
 
 <footer>
   <a href="#" class="logo">24<span>Import</span></a>
   <p class="ft">Relojes de Alta Gama - Inspirados en las mejores marcas<br>
-  WhatsApp: <a href="https://wa.me/5491127054075">+54 9 11 6215-2890</a><br>
+  WhatsApp: <a href="https://wa.me/5491127054075">+54 9 11 2705-4075</a><br>
   Envios a todo el pais - Contra entrega CABA y GBA</p>
 </footer>
 
@@ -522,7 +715,16 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 
 <div class="modal-bg" id="modalBg">
   <div class="modal">
-    <img class="modal-img" id="mImg" src="" alt="">
+    <div class="modal-media-wrap" id="mMediaWrap">
+      <div class="modal-slides-inner" id="mSlidesInner">
+        <div class="modal-slide"><img class="modal-img" id="mImg" src="" alt=""></div>
+        <div class="modal-slide" id="mVidSlide" style="display:none"><video class="modal-vid" id="mVid" muted loop playsinline></video></div>
+      </div>
+      <div class="modal-dots" id="mModalDots" style="display:none">
+        <div class="modal-dot active" id="mDot0"></div>
+        <div class="modal-dot" id="mDot1"></div>
+      </div>
+    </div>
     <div class="modal-gold" id="mGold"></div>
     <div class="modal-body">
       <div class="modal-brand" id="mBrand"></div>
@@ -568,9 +770,11 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
       <div class="field"><label>Nombre del modelo</label><input type="text" id="aModel" placeholder="Ej: Submariner Gold"></div>
       <div class="field"><label>Marca</label>
         <select id="aBrand">
-          <option value="Rolex">Rolex</option>
+          <option value="Rolex AAA+">Rolex AAA+</option>
+          <option value="Rolex">Rolex AAA+ Automatico</option>
           <option value="Patek Philippe">Patek Philippe</option>
           <option value="Cartier">Cartier</option>
+          <option value="Tag Heuer">Tag Heuer</option>
           <option value="Otro">Otro</option>
         </select>
       </div>
@@ -601,58 +805,142 @@ footer .logo{font-size:20px;display:block;margin-bottom:8px}
 "use strict";
 var CLD = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_800,c_fill,g_auto:subject,z_0.85,q_auto:best,f_auto/";
 var CLD_AAA = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/";
+var CLDV = "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/";
 var PASS = "24import2024";
 var WA = "5491127054075";
 var SK = "24import_extra_v2";
 
 var BUILT_IN = [
-  {brand:"Rolex AAA+",model:"Datejust Azul Bicolor",variant:"Esfera Azul - Acero y Gold",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_2ccee15e264f43cdb241196cc053c287_gnftjy.jpg",desc:"Datejust con esfera azul vibrante y caja bicolor acero/gold. Bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Datejust Rojo Diamantes",variant:"Esfera Roja con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_2b5bc304252847b8b18c2cf3b14d5de9_agmleg.jpg",desc:"Datejust con esfera roja sunray y diamantes. Caja de acero, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Azul Diamantes",variant:"Esfera Azul con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_173195a2c7d049d5a51627fe2fb93467_jwtfsl.jpg",desc:"Day-Date con esfera azul y diamantes. Caja de acero, brazalete President."},
-  {brand:"Rolex AAA+",model:"Datejust Plateado Diamantes",variant:"Esfera Plateada con Diamantes - Caja Acero",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_daf026db1ebf47c4a66079f2c779a656_xoj3eu.jpg",desc:"Datejust con esfera plateada y diamantes. Caja de acero, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Plateado Bicolor",variant:"Esfera Plateada - Acero y Gold",price:"$ 155.000",status:"disponible",img:CLD_AAA+"Claid_35d6b3e5743846188096d3513650b5a3_v5etcu.jpg",desc:"Day-Date bicolor con esfera plateada. Brazalete President, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Acero",variant:"Esfera Negra con Diamantes - Caja Acero",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_081a587096aa424db1e7826efd88dea1_iu2ifn.jpg",desc:"Datejust con esfera negra y diamantes. Caja de acero, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Plateado Gold",variant:"Esfera Plateada - Caja Gold",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_8c8b611ec1f44be890b6afc25fff6d79_dg1dxn.jpg",desc:"Day-Date completamente bañado en oro con esfera plateada. Brazalete President."},
-  {brand:"Rolex AAA+",model:"Datejust Verde Diamantes",variant:"Esfera Verde con Diamantes - Acero y Gold",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_55b32299887941bfa5584b0d5bd96dde_imkqvx.jpg",desc:"Datejust con esfera verde vibrante y diamantes. Caja bicolor acero/gold."},
-  {brand:"Rolex AAA+",model:"Day-Date Verde Gold",variant:"Esfera Verde - Caja Full Gold",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_785e268555b544fab3cb1e51d7f856be_ppdche.jpg",desc:"Day-Date completamente bañado en oro con esfera verde brillante. President."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Acero II",variant:"Esfera Negra con Diamantes - Caja Acero",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_cc96359c36d645d1bc77bafff9f0caf9_dw1xn1.jpg",desc:"Datejust con esfera negra y diamantes. Caja de acero, brazalete Oyster."},
-  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Bicolor",variant:"Esfera Azul con Diamantes - Acero y Gold",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_816dc3dcf7e14c4f8b6ac0b4df38a11c_jggta7.jpg",desc:"Datejust bicolor con esfera azul y diamantes. Brazalete Jubilee."},
-  {brand:"Rolex AAA+",model:"Datejust Plateado Diamantes Acero",variant:"Esfera Plateada con Diamantes - Caja Acero",price:"$ 162.000",status:"disponible",img:CLD_AAA+"Claid_7718e6b6c11e4bcb8365553a7b4c4a04_sxi6g6.jpg",desc:"Datejust con esfera plateada sunray y diamantes. Caja de acero."},
-  {brand:"Rolex AAA+",model:"Day-Date Azul Bicolor",variant:"Esfera Azul - Acero y Gold",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_3de21717e38e4bf8a660f797953a8365_gjmjm9.jpg",desc:"Day-Date bicolor con esfera azul. Brazalete President, bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Day-Date Azul Gold",variant:"Esfera Azul - Caja Full Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_a7bb94922bee4510b3de1d52ee40e51d_l0iecz.jpg",desc:"Day-Date completamente bañado en oro con esfera azul. Brazalete President."},
-  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Gold",variant:"Esfera Azul con Diamantes - Caja Gold",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_c826a1fc4ccc49ceadfe1e2c876593a2_y8bs5o.jpg",desc:"Datejust bañado en oro con esfera azul y diamantes. Bisel acanalado."},
-  {brand:"Rolex AAA+",model:"Datejust Purpura Gold",variant:"Esfera Purpura - Caja Gold",price:"$ 158.000",status:"disponible",img:CLD_AAA+"Claid_15d213bd2c3a418aa565072bc22267ca_tw6d5r.jpg",desc:"Datejust en oro con esfera purpura/violeta. Bisel acanalado, brazalete President."},
-  {brand:"Rolex AAA+",model:"Sky-Dweller Champagne Gold",variant:"Esfera Champagne - Caja Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_3401fffea8444fb4bfcd4105f22c5bd6_d3qqv2.jpg",desc:"Sky-Dweller completamente bañado en oro con esfera champagne. Doble huso horario."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Bicolor",variant:"Esfera Negra con Diamantes - Acero y Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_20a0463725194e19b023ec18b2f53abc_t4v7ts.jpg",desc:"Datejust bicolor con esfera negra y diamantes. Brazalete Jubilee."},
-  {brand:"Rolex AAA+",model:"Day-Date Champagne Gold",variant:"Esfera Champagne - Caja Full Gold",price:"$ 150.000",status:"disponible",img:CLD_AAA+"Claid_6aeecc1a723c4fd499f777974d04f4fd_pgoiwg.jpg",desc:"Day-Date completamente bañado en oro con esfera champagne. President."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Acero",variant:"Esfera Negra - Caja Acero",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_3f17f506033c4ce7852fe8b3e83339b5_rfvjzf.jpg",desc:"Datejust clasico con esfera negra. Caja de acero, brazalete Oyster, bisel liso."},
-  {brand:"Rolex AAA+",model:"Datejust Negro Diamantes Jubilee",variant:"Esfera Negra con Diamantes - Bicolor Jubilee",price:"$ 152.000",status:"disponible",img:CLD_AAA+"Claid_c73cbd830e1e4804bd4d29b82a79805f_r7rx8i.jpg",desc:"Datejust con esfera negra y diamantes. Brazalete Jubilee bicolor."},
-  {brand:"Rolex AAA+",model:"Datejust Azul Diamantes Aqua",variant:"Esfera Azul con Diamantes - Caja Acero",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_1f777da080954646b6d6afe66eb4b4ea_ismycj.jpg",desc:"Datejust con esfera azul brillante y diamantes. Caja de acero, bisel liso."},
-  {brand:"Rolex AAA+",model:"Datejust Aqua Diamantes Gold",variant:"Esfera Aqua con Diamantes - Caja Gold",price:"$ 160.000",status:"disponible",img:CLD_AAA+"Claid_bcfc92a61e44492396db340f63b0cf59_pa98ee.jpg",desc:"Datejust en oro con esfera celeste/aqua y diamantes. Bisel acanalado."},
-  {brand:"Rolex",model:"Datejust Nacar y Negro",variant:"Esfera Nacar y Negra con Diamantes",price:"$ 210.000",status:"disponible",img:CLD+"d8f8a9d0-2bb0-408e-98de-dfa33c56606e_py7lon.jpg",desc:"Dos versiones del Datejust. Esfera nacar blanca o negra con diamantes. Brazalete Jubilee, movimiento automatico."},
-  {brand:"Rolex",model:"Datejust Gold",variant:"Esfera Verde y Negra - Caja Full Gold",price:"$ 210.000",status:"disponible",img:CLD+"a4dba4dc-a453-44b7-988c-f3630c61afed_cqwlid.jpg",desc:"El Datejust completamente bañado en oro. Disponible en esfera verde o negra, ambas con bisel acanalado dorado y brazalete President. Movimiento automatico."},
-  {brand:"Rolex",model:"GMT-Master II Pepsi",variant:"Bisel Rojo/Negro y Azul/Rojo",price:"$ 220.000",status:"disponible",img:CLD+"e8466473-6954-4381-9ff0-070214c62902_gx65p0.jpg",desc:"El mitico Pepsi. Bisel bicolor rojo y azul con escala de 24 horas. Movimiento automatico."},
-  {brand:"Rolex",model:"Daytona Acero",variant:"Esfera Blanca y Negra - Bisel Negro",price:"$ 225.000",status:"disponible",img:CLD+"2c23be90-efdd-4fd7-8fbd-7d9a6b74f5f7_f9ijrx.jpg",desc:"El cronografo de los campeones. Tres subdiales funcionales, bisel ceramico negro, caja de acero. Movimiento automatico."},
-  {brand:"Rolex",model:"Labelnoir Azul y Blanco",variant:"Esfera Azul y Blanca - Tourbillon Visible",price:"$ 220.000",status:"disponible",img:CLD+"fff392b5-dd7b-413c-a494-008189ea6427_xjuf8e.jpg",desc:"El Labelnoir con tourbillon visible. Disponible en azul zafiro o blanco nacar. El mecanismo gira visible en la esfera."},
-  {brand:"Rolex",model:"Labelnoir Negro y Celeste",variant:"Esfera Negra y Celeste - Tourbillon Visible",price:"$ 200.000",status:"disponible",img:CLD+"70463405-f6b1-4149-8b5b-61d7b21f60cf_yvrtfh.jpg",desc:"Dos colorways del Labelnoir. Esfera negra o celeste. El tourbillon dorado gira visible. Movimiento automatico."},
-  {brand:"Rolex",model:"Oyster Perpetual Candy",variant:"Esfera Menta Multicolor - Caja Acero",price:"$ 205.000",status:"disponible",img:CLD+"d25ec0cb-a733-4864-b191-1cb620997c4d_famhg0.jpg",desc:"La pieza mas audaz. Esfera verde menta con circulos de colores vibrantes. Para los que quieren un reloj que hable por si solo."},
-  {brand:"Rolex",model:"Oyster Perpetual Candy Gold",variant:"Esfera Menta Multicolor - Caja Gold",price:"$ 225.000",status:"disponible",img:CLD+"cd706bff-be27-4faf-bd1d-6d23c425811d_crf0xv.jpg",desc:"La pieza mas audaz en version gold. Esfera verde menta con circulos de colores. Caja bañada en oro."},
-  {brand:"Rolex",model:"GMT-Master II Negro",variant:"Bisel Negro - Acero y Bicolor",price:"$ 230.000",status:"disponible",img:CLD+"b7e6cfb0-1989-4e69-9bb8-71f5f8c1febc_ivliq1.jpg",desc:"El reloj del viajero. Permite seguir dos husos horarios simultaneamente. Disponible en acero o bicolor."},
-  {brand:"Rolex",model:"Daytona Rubber Gold",variant:"Esfera Verde y Negra - Correa Rubber Gold",price:"$ 215.000",status:"disponible",img:CLD+"099428a3-7726-4199-a80b-234c372fcaae_jd9wto.jpg",desc:"Caja bañada en oro con correa de goma negra. Disponible en esfera verde, negra o con diamantes."},
-  {brand:"Rolex",model:"Submariner Gold",variant:"Esfera Champagne y Negra - Caja Gold",price:"$ 220.000",status:"disponible",img:CLD+"155a30e7-baef-42cb-a641-c980fb3f2d7d_ghq8lg.jpg",desc:"El Submariner en version lujosa. Caja y brazalete bañados en oro. Movimiento automatico, cristal de alta resistencia."},
-  {brand:"Rolex",model:"Sky-Dweller Gold",variant:"Esfera Negra y Plateada - Full Gold",price:"$ 225.000",status:"disponible",img:CLD+"fdf7a0c1-1da6-4c7b-ac4e-540719945671_f8h6ji.jpg",desc:"El Sky-Dweller completamente bañado en oro. Esfera negra o plateada. Doble huso horario, movimiento automatico."},
-  {brand:"Rolex",model:"Daytona Acero Bisel Negro",variant:"Esfera Blanca y Negra - Bisel Ceramico",price:"$ 200.000",status:"disponible",img:CLD+"b10258ab-c0d1-42db-8e65-843f51da0977_ycyknx.jpg",desc:"El Daytona en acero con bisel negro ceramico. Tres subdiales funcionales. Movimiento automatico."},
-  {brand:"Rolex",model:"Submariner Hulk",variant:"Esfera Verde - Acero y Gold",price:"$ 225.000",status:"disponible",img:CLD+"c3a3c3e9-c24e-48c7-8c9c-820c7b87a8e8_skxlxg.jpg",desc:"El Submariner mas codiciado. Su distintiva esfera y bisel verde lo hacen inconfundible. Disponible en acero o gold."},
-  {brand:"Rolex",model:"GMT-Master II Sprite",variant:"Bisel Verde/Negro - Caja Acero",price:"$ 225.000",status:"disponible",img:CLD+"99f81eeb-3be2-4893-b95a-b05b9c1f698f_dfvr7e.jpg",desc:"La edicion mas moderna del GMT-Master II. Su bisel bicolor verde y negro es uno de los diseños mas buscados."},
-  {brand:"Rolex",model:"Daytona Rubber Acero",variant:"Esfera Negra y Plateada - Correa Rubber",price:"$ 215.000",status:"disponible",img:CLD+"1a01e6f6-196b-4ed2-bd3f-e206e01b8dd5_smnqyc.jpg",desc:"El Daytona mas moderno. Caja de acero con correa de goma negra. Esfera negra o plateada."},
-  {brand:"Rolex",model:"Sky-Dweller Negro y Verde",variant:"Esfera Negra y Verde - Caja Acero",price:"$ 210.000",status:"disponible",img:CLD+"38b9b496-ac69-485d-9bbb-e53ba3a70ac7_pfs9wo.jpg",desc:"El Sky-Dweller en sus variantes mas llamativas. Esfera negra o verde. Movimiento automatico con doble huso horario."},
-  {brand:"Rolex",model:"GMT-Master II Pepsi Acero",variant:"Bisel Rojo/Negro - Esfera Plateada",price:"$ 230.000",status:"disponible",img:CLD+"fe6059a0-0f0b-4af1-8727-308ef186ad35_u6q6p7.jpg",desc:"El GMT-Master II Pepsi en acero con esfera plateada. Bisel bicolor rojo y negro, movimiento automatico."},
-  {brand:"Rolex",model:"Daytona Gold",variant:"Esfera Negra y Champagne - Caja Gold",price:"$ 215.000",status:"disponible",img:CLD+"1f2496dc-055d-4c4a-b702-27ab63ca1f4f_aysemp.jpg",desc:"El Daytona en version lujosa. Caja y brazalete bañados en oro. La combinacion perfecta entre deportividad y lujo."},
-  {brand:"Rolex",model:"Sky-Dweller Acero y Gold",variant:"Esfera Negra y Dorada - Acero y Gold",price:"$ 200.000",status:"disponible",img:CLD+"11893d25-c6b9-4627-971b-072844b662ea_jv8zv8.jpg",desc:"El Sky-Dweller disponible en acero o gold. Doble huso horario, movimiento automatico."},
-  {brand:"Rolex",model:"Submariner Negro",variant:"Esfera Negra - Caja Acero",price:"$ 230.000",status:"disponible",img:CLD+"ab961f37-c519-46f6-8c7e-1f9c7d593345_l2jy22.jpg",desc:"La version mas clasica del Submariner. Esfera negra, bisel ceramico negro, caja de acero. Movimiento automatico."},
-  {brand:"Rolex",model:"Sky-Dweller Bicolor",variant:"Esfera Plateada y Dorada - Acero y Gold",price:"$ 230.000",status:"disponible",img:CLD+"32134c38-39e9-4c45-9f3a-9d1ae214d8de_mnzbeu.jpg",desc:"El Sky-Dweller bicolor con esfera plateada o dorada. Combinacion de acero y oro, movimiento automatico."},
-  {brand:"Rolex",model:"Daytona Rubber Gold Diamantes",variant:"Esfera Plateada con Diamantes - Caja Gold",price:"$ 225.000",status:"disponible",img:CLD+"833b4ec2-6012-4608-bcb6-63bbc28f3a82_lnexbx.jpg",desc:"La pieza mas exclusiva. Esfera plateada con indices de diamante, caja bañada en oro y correa de goma."},
-  {brand:"Rolex",model:"Datejust Diamantes Acero",variant:"Esfera Gris con Diamantes - Caja Acero",price:"$ 205.000",status:"disponible",img:CLD+"9c3c2ba6-d5c8-4c71-bfce-a8626c1a969c_qfcftf.jpg",desc:"El Datejust con esfera sunray y diamantes en caja de acero. Bisel acanalado, movimiento automatico."},
+  /* ── ROLEX AAA+ ── */
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Azul - Baguette Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-azul-baguette-oyster",desc:"Datejust bicolor acero y gold con esfera azul y bisel baguette. Brazalete Oyster. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-azul-baguette-oyster"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Azul - Baston Estriado",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-azul-baston-estriado",desc:"Datejust bicolor con esfera azul y baston. Bisel estriado, brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-azul-baston-estriado"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Champagne - Baston Estriado",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-champagne-baston-estriado",desc:"Datejust bicolor con esfera champagne y baston. Bisel estriado. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-champagne-baston-estriado"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Azul - Romano",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-esfera-azul-romano",desc:"Datejust bicolor con esfera azul e indices romanos. Caja bicolor acero y gold. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-esfera-azul-romano"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Morada - Baston Estriado",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-morada-baston-estriado",desc:"Datejust bicolor con esfera morada y baston. Bisel estriado. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-morada-baston-estriado"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Plateada - Baston Estriado",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-plateada-baston-estriado",desc:"Datejust bicolor con esfera plateada y baston. Bisel estriado. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-plateada-baston-estriado"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Plateada - Baston Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-plateada-baston-oyster",desc:"Datejust bicolor con esfera plateada y baston. Brazalete Oyster bicolor. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-plateada-baston-oyster"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Bicolor Verde - Baston Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-bicolor-verde-baston-oyster",desc:"Datejust bicolor con esfera verde y baston. Brazalete Oyster bicolor. Acabados AAA+.",video:"relojes/videos/datejust-bicolor-verde-baston-oyster"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Azul - Baston Jubilee",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-azul-baston-jubilee",desc:"Datejust gold con esfera azul y baston. Brazalete Jubilee dorado. Acabados AAA+.",video:"relojes/videos/datejust-gold-azul-baston-jubilee"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Champagne - Baston",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-champagne-baston",desc:"Datejust gold con esfera champagne y baston dorado. Bisel acanalado. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Azul - Romano",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-esfera-azul-romano",desc:"Datejust gold con esfera azul e indices romanos. Caja y bisel gold. Acabados AAA+.",video:"relojes/videos/datejust-gold-esfera-azul-romano"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Blanca - Baston",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-esfera-blanca-baston",desc:"Datejust gold con esfera blanca y baston dorado. Bisel acanalado. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Blanca - Edicion II",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-esfera-blanca-v2",desc:"Datejust gold con esfera blanca, segunda version. Bisel acanalado. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Morada - Baston Estriado",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-morada-baston-estriado",desc:"Datejust gold con esfera morada y baston. Bisel estriado dorado. Acabados AAA+.",video:"relojes/videos/datejust-gold-morada-baston-estriado"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Plateada - Baston Estriado",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-plateada-baston-estriado",desc:"Datejust gold con esfera plateada y baston. Bisel estriado dorado. Acabados AAA+.",video:"relojes/videos/datejust-gold-plateada-baston-estriado"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Plateada - Romano President",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-plateada-romano-president",desc:"Datejust gold con esfera plateada e indices romanos. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/datejust-gold-plateada-romano-president"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Tiffany - Motivo Panal",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-tiffany-motivo-panal",desc:"Datejust gold con esfera tiffany y motivo panal. Bisel acanalado dorado. Acabados AAA+.",video:"relojes/videos/datejust-gold-tiffany-motivo-panal"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Gold Verde - Baston President",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-verde-baston-president",desc:"Datejust gold con esfera verde y baston. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/datejust-gold-verde-baston-president"},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Acero Negra - Romano",price:"$ 160.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-steel-esfera-negra-romano",desc:"Datejust acero con esfera negra e indices romanos. Bisel acanalado. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Acero Negra - Baston Estriado",price:"$ 160.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-steel-negra-baston-estriado",desc:"Datejust acero con esfera negra y baston. Bisel estriado. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Datejust",variant:"Acero Plateada - Diamantes Jubilee",price:"$ 160.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-steel-plateada-diamantes-jubilee",desc:"Datejust acero con esfera plateada y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/datejust-steel-plateada-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Azul - Baguette",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-azul-baguette-viernes",desc:"Day-Date bicolor con esfera azul y bisel baguette. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-azul-baguette-viernes"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Azul - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-azul-diamantes-jubilee",desc:"Day-Date bicolor con esfera azul y diamantes. Brazalete Jubilee bicolor. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-azul-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Azul - Diamantes Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-azul-diamantes-oyster",desc:"Day-Date bicolor con esfera azul y diamantes. Brazalete Oyster. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-azul-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Champagne - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-champagne-diamantes-jubilee",desc:"Day-Date bicolor con esfera champagne y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-champagne-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Champagne - Romano",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-champagne-romano",desc:"Day-Date bicolor con esfera champagne e indices romanos. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-champagne-romano"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Azul - Baston",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-esfera-azul-baston",desc:"Day-Date bicolor con esfera azul y baston. Brazalete President bicolor. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-esfera-azul-baston"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Azul - Romano",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-esfera-azul-romano",desc:"Day-Date bicolor con esfera azul e indices romanos. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-esfera-azul-romano"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Morada",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-esfera-morada",desc:"Day-Date bicolor con esfera morada. Brazalete President bicolor. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-esfera-morada"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Morada - Diamantes Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-morada-diamantes-oyster",desc:"Day-Date bicolor con esfera morada y diamantes. Brazalete Oyster. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Negra - Diamantes",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-negra-diamantes-smooth",desc:"Day-Date bicolor con esfera negra y diamantes. Bisel smooth. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Plateada - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-plateada-diamantes-jubilee",desc:"Day-Date bicolor con esfera plateada y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-plateada-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Plateada - Diamantes Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-plateada-diamantes-oyster",desc:"Day-Date bicolor con esfera plateada y diamantes. Brazalete Oyster. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-plateada-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Tiffany - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-tiffany-diamantes-jubilee",desc:"Day-Date bicolor con esfera tiffany y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-tiffany-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Tiffany - Diamantes Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-tiffany-diamantes-oyster",desc:"Day-Date bicolor con esfera tiffany y diamantes. Brazalete Oyster. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-tiffany-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Turquesa - Marmol",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-turquesa-marmol",desc:"Day-Date bicolor con esfera turquesa y efecto marmol. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-turquesa-marmol"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Verde - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-verde-diamantes-jubilee",desc:"Day-Date bicolor con esfera verde y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/day-date-bicolor-verde-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Bicolor Verde Menta",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-verde-menta",desc:"Day-Date bicolor con esfera verde menta. Brazalete President bicolor. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Azul - Diamantes Oyster",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-azul-diamantes-oyster",desc:"Day-Date gold con esfera azul y diamantes. Brazalete Oyster dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-azul-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Azul - Diamantes President",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-azul-diamantes-president",desc:"Day-Date gold con esfera azul y diamantes. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-azul-diamantes-president"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Champagne - Baston",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-champagne-baston",desc:"Day-Date gold con esfera champagne y baston. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-champagne-baston"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Champagne - Romano",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-champagne-romano",desc:"Day-Date gold con esfera champagne e indices romanos. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-champagne-romano"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Morada",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-esfera-morada",desc:"Day-Date gold con esfera morada. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-esfera-morada"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Turquesa",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-esfera-turquesa",desc:"Day-Date gold con esfera turquesa. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-esfera-turquesa"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Marmol Negro",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-marmol-negro",desc:"Day-Date gold con esfera efecto marmol negro. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-marmol-negro"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Negra - Diamantes Oversize",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-negra-diamantes-oversize",desc:"Day-Date gold oversize con esfera negra y diamantes. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-negra-diamantes-oversize"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Negra - Diamantes President",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-negra-diamantes-president",desc:"Day-Date gold con esfera negra y diamantes. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-negra-diamantes-president"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Plateada - Romano",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-plateada-romano-miercoles",desc:"Day-Date gold con esfera plateada e indices romanos. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-plateada-romano-miercoles"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Verde - Diamantes Oyster",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-verde-diamantes-oyster",desc:"Day-Date gold con esfera verde y diamantes. Brazalete Oyster dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-verde-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Gold Verde - Diamantes President",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-verde-diamantes-president",desc:"Day-Date gold con esfera verde y diamantes. Brazalete President dorado. Acabados AAA+.",video:"relojes/videos/day-date-gold-verde-diamantes-president"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Azul Cobalt - Diamantes",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-azul-cobalt-diamantes",desc:"Day-Date acero con esfera azul cobalt y diamantes. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-steel-azul-cobalt-diamantes"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Azul - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-azul-diamantes-jubilee",desc:"Day-Date acero con esfera azul y diamantes. Brazalete Jubilee. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Gradiente Rojo Negro",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-gradiente-rojo-negro",desc:"Day-Date acero con esfera gradiente rojo-negro. Brazalete President. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Marmol Negro",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-marmol-negro",desc:"Day-Date acero con esfera efecto marmol negro. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-steel-marmol-negro"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Negra - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-negra-diamantes-jubilee",desc:"Day-Date acero con esfera negra y diamantes. Brazalete Jubilee. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Negra - Diamantes President",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-negra-diamantes-president",desc:"Day-Date acero con esfera negra y diamantes. Brazalete President. Acabados AAA+."},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Plateada - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-plateada-diamantes-jubilee",desc:"Day-Date acero con esfera plateada y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/day-date-steel-plateada-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Plateada - Diamantes Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-plateada-diamantes-oyster",desc:"Day-Date acero con esfera plateada y diamantes. Brazalete Oyster. Acabados AAA+.",video:"relojes/videos/day-date-steel-plateada-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Plateada - Diamantes President",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-plateada-diamantes-president",desc:"Day-Date acero con esfera plateada y diamantes. Brazalete President. Acabados AAA+.",video:"relojes/videos/day-date-steel-plateada-diamantes-president"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Tiffany - Diamantes Oyster",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-tiffany-diamantes-oyster",desc:"Day-Date acero con esfera tiffany y diamantes. Brazalete Oyster. Acabados AAA+.",video:"relojes/videos/day-date-steel-tiffany-diamantes-oyster"},
+  {brand:"Rolex AAA+",model:"Day-Date",variant:"Acero Verde - Diamantes Jubilee",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-verde-diamantes-jubilee",desc:"Day-Date acero con esfera verde y diamantes. Brazalete Jubilee. Acabados AAA+.",video:"relojes/videos/day-date-steel-verde-diamantes-jubilee"},
+  {brand:"Rolex AAA+",model:"GMT-Master II",variant:"Batman - Esfera Negra",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-batman-esfera-negra",desc:"GMT-Master II Batman con bisel negro y azul. Esfera negra. Doble huso horario.",video:"relojes/videos/gmt-master-batman-esfera-negra"},
+  {brand:"Rolex AAA+",model:"GMT-Master II",variant:"Bicolor - Esfera Azul",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-bicolor-esfera-azul",desc:"GMT-Master II bicolor con esfera azul. Doble huso horario, caja bicolor acero y gold.",video:"relojes/videos/gmt-master-bicolor-esfera-azul"},
+  {brand:"Rolex AAA+",model:"GMT-Master II",variant:"Bicolor - Esfera Blanca",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-bicolor-esfera-blanca",desc:"GMT-Master II bicolor con esfera blanca. Doble huso horario, caja bicolor acero y gold.",video:"relojes/videos/gmt-master-bicolor-esfera-blanca"},
+  {brand:"Rolex AAA+",model:"GMT-Master II",variant:"Acero Azul Total",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-steel-esfera-azul-total",desc:"GMT-Master II acero con esfera azul total. Bisel ceramico azul. Doble huso horario.",video:"relojes/videos/gmt-master-steel-esfera-azul-total"},
+  {brand:"Rolex AAA+",model:"GMT-Master II",variant:"Acero - Esfera Negra y Blanca",price:"$ 170.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-steel-esfera-negra-blanca",desc:"GMT-Master II acero con esfera negra y blanca. Bisel ceramico. Doble huso horario.",video:"relojes/videos/gmt-master-steel-esfera-negra-blanca"},
+  {brand:"Rolex AAA+",model:"Sky-Dweller",variant:"Bicolor Negra - Baston Jubilee",price:"$ 175.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-bicolor-negra-baston-jubilee",desc:"Sky-Dweller bicolor con esfera negra y baston. Brazalete Jubilee bicolor. Doble huso horario.",video:"relojes/videos/sky-dweller-bicolor-negra-baston-jubilee"},
+  {brand:"Rolex AAA+",model:"Sky-Dweller",variant:"Bicolor Tiffany - Baston",price:"$ 175.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-bicolor-tiffany-baston",desc:"Sky-Dweller bicolor con esfera tiffany y baston. Caja bicolor acero y gold. Doble huso horario.",video:"relojes/videos/sky-dweller-bicolor-tiffany-baston"},
+  {brand:"Rolex AAA+",model:"Sky-Dweller",variant:"Gold Azul - Baston Jubilee",price:"$ 175.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-gold-azul-baston-jubilee",desc:"Sky-Dweller gold con esfera azul y baston. Brazalete Jubilee dorado. Doble huso horario.",video:"relojes/videos/sky-dweller-gold-azul-baston-jubilee"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Bicolor Azul",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-bicolor-esfera-azul-bicolor",desc:"Submariner bicolor acero y gold con esfera y bisel azul. El buzo bicolor mas buscado.",video:"relojes/videos/submariner-bicolor-esfera-azul-bicolor"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Azul Intenso",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-azul-intenso",desc:"Submariner acero con esfera y bisel azul intenso. El clasico azul de Rolex.",video:"relojes/videos/submariner-steel-esfera-azul-intenso"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Azul y Negro",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-azul-negro",desc:"Submariner acero con esfera azul y bisel negro. Combinacion iconica y elegante.",video:"relojes/videos/submariner-steel-esfera-azul-negro"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Blanca y Azul",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-blanca-azul",desc:"Submariner acero con esfera blanca y bisel azul. Version fresca y deportiva.",video:"relojes/videos/submariner-steel-esfera-blanca-azul"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Negra y Blanca",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-negra-blanco",desc:"Submariner acero con esfera negra y detalle blanco. El clasico nocturno de Rolex.",video:"relojes/videos/submariner-steel-esfera-negra-blanco"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Negra Clasica",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-negra-clasica",desc:"Submariner acero clasico con esfera y bisel negro. El icono del buceo de lujo.",video:"relojes/videos/submariner-steel-esfera-negra-clasica"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Verde y Negro",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-verde-negro",desc:"Submariner acero con esfera verde y bisel negro. El Kermit, un clasico contemporaneo.",video:"relojes/videos/submariner-steel-esfera-verde-negro"},
+  {brand:"Rolex AAA+",model:"Submariner",variant:"Acero Verde Hulk Clasico",price:"$ 165.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-verde-hulk-clasico",desc:"Submariner acero Hulk con esfera y bisel verde clasico. El mas buscado de la coleccion.",video:"relojes/videos/submariner-steel-verde-hulk-clasico"},
+  /* ── ROLEX AAA+ AUTOMATICOS ── */
+  {brand:"Rolex",model:"Datejust",variant:"Gold Negra Rayada",price:"$ 200.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-gold-esfera-negra-rayada",desc:"Datejust automatico gold con esfera negra rayada. Bisel acanalado dorado. Movimiento automatico.",video:"relojes/videos/datejust-gold-esfera-negra-rayada"},
+  {brand:"Rolex",model:"Datejust",variant:"Acero Nacar con Diamantes",price:"$ 200.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-steel-esfera-nacar-diamantes",desc:"Datejust automatico acero con esfera nacar y diamantes. Brazalete Jubilee. Movimiento automatico.",video:"relojes/videos/datejust-steel-esfera-nacar-diamantes"},
+  {brand:"Rolex",model:"Datejust",variant:"Acero Negra con Diamantes",price:"$ 200.000",status:"disponible",img:CLD_AAA+"relojes/fotos/datejust-steel-negro-indices-diamantes",desc:"Datejust automatico acero con esfera negra e indices de diamantes. Brazalete Jubilee. Movimiento automatico.",video:"relojes/videos/datejust-steel-negro-indices-diamantes"},
+  {brand:"Rolex",model:"Day-Date",variant:"Bicolor Champagne - Diamantes",price:"$ 210.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-champagne-diamantes",desc:"Day-Date automatico bicolor con esfera champagne y diamantes. Movimiento automatico.",video:"relojes/videos/day-date-bicolor-champagne-diamantes"},
+  {brand:"Rolex",model:"Day-Date",variant:"Bicolor Negra - Diamantes",price:"$ 210.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-negra-diamantes",desc:"Day-Date automatico bicolor con esfera negra y diamantes. Movimiento automatico.",video:"relojes/videos/day-date-bicolor-negra-diamantes"},
+  {brand:"Rolex",model:"Day-Date",variant:"Bicolor Plateada - Diamantes",price:"$ 210.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-bicolor-plateada-diamantes",desc:"Day-Date automatico bicolor con esfera plateada y diamantes. Movimiento automatico.",video:"relojes/videos/day-date-bicolor-plateada-diamantes"},
+  {brand:"Rolex",model:"Day-Date",variant:"Gold Candy - Edicion Especial",price:"$ 210.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-gold-candy-edicion-especial",desc:"Day-Date gold Candy edicion especial. Esfera multicolor vibrante. Movimiento automatico.",video:"relojes/videos/day-date-gold-candy-edicion-especial"},
+  {brand:"Rolex",model:"Day-Date",variant:"Acero Candy - Edicion Especial",price:"$ 210.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-candy-edicion-especial",desc:"Day-Date acero Candy edicion especial. Esfera multicolor vibrante. Movimiento automatico.",video:"relojes/videos/day-date-steel-candy-edicion-especial"},
+  {brand:"Rolex",model:"Day-Date",variant:"Acero Rosa con Diamantes",price:"$ 210.000",status:"disponible",img:CLD_AAA+"relojes/fotos/day-date-steel-rosa-diamantes",desc:"Day-Date automatico acero con esfera rosa y diamantes. Movimiento automatico.",video:"relojes/videos/day-date-steel-rosa-diamantes"},
+  {brand:"Rolex",model:"Daytona",variant:"Bicolor Esfera Blanca Crono",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-bicolor-esfera-blanca-crono",desc:"Daytona bicolor cronografo con esfera blanca. Tres subdiales funcionales. Movimiento automatico.",video:"relojes/videos/daytona-bicolor-esfera-blanca-crono"},
+  {brand:"Rolex",model:"Daytona",variant:"Gold Full Esfera Dorada",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-gold-esfera-dorada-full",desc:"Daytona gold full con esfera dorada. Caja y brazalete bañados en oro. Movimiento automatico.",video:"relojes/videos/daytona-gold-esfera-dorada-full"},
+  {brand:"Rolex",model:"Daytona",variant:"Gold Rubber Esfera Champagne",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-gold-rubber-esfera-champagne",desc:"Daytona gold con correa rubber y esfera champagne. Caja dorada. Movimiento automatico.",video:"relojes/videos/daytona-gold-rubber-esfera-champagne"},
+  {brand:"Rolex",model:"Daytona",variant:"Acero Esfera Negra y Blanca",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-steel-esfera-negra-blanca",desc:"Daytona acero con esfera negra y blanca. Tres subdiales funcionales. Movimiento automatico.",video:"relojes/videos/daytona-steel-esfera-negra-blanca"},
+  {brand:"Rolex",model:"Daytona",variant:"Acero Esfera Negra Crono",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-steel-esfera-negra-crono",desc:"Daytona acero con esfera negra. El cronografo de los campeones. Movimiento automatico.",video:"relojes/videos/daytona-steel-esfera-negra-crono"},
+  {brand:"Rolex",model:"Daytona",variant:"Acero Rubber Esfera Gris",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-steel-rubber-esfera-gris",desc:"Daytona acero con correa rubber y esfera gris. Deportivo y moderno. Movimiento automatico.",video:"relojes/videos/daytona-steel-rubber-esfera-gris"},
+  {brand:"Rolex",model:"Daytona",variant:"Acero Rubber Esfera Negra",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/daytona-steel-rubber-esfera-negra",desc:"Daytona acero con correa rubber y esfera negra. Deportivo y elegante. Movimiento automatico.",video:"relojes/videos/daytona-steel-rubber-esfera-negra"},
+  {brand:"Rolex",model:"GMT-Master II",variant:"Bicolor Esfera Negra",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-bicolor-esfera-negra",desc:"GMT-Master II automatico bicolor con esfera negra. Doble huso horario. Movimiento automatico.",video:"relojes/videos/gmt-master-bicolor-esfera-negra"},
+  {brand:"Rolex",model:"GMT-Master II",variant:"Coke Esfera Negra",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-coke-esfera-negra",desc:"GMT-Master II automatico Coke con bisel rojo y negro. Esfera negra. Movimiento automatico.",video:"relojes/videos/gmt-master-coke-esfera-negra"},
+  {brand:"Rolex",model:"GMT-Master II",variant:"Gold Full Esfera Negra",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-gold-esfera-negra-full",desc:"GMT-Master II gold full con esfera negra. Caja y brazalete dorados. Movimiento automatico.",video:"relojes/videos/gmt-master-gold-esfera-negra-full"},
+  {brand:"Rolex",model:"GMT-Master II",variant:"Pepsi Esfera Negra",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-pepsi-esfera-negra",desc:"GMT-Master II automatico Pepsi con bisel rojo y azul. Esfera negra. Movimiento automatico.",video:"relojes/videos/gmt-master-pepsi-esfera-negra"},
+  {brand:"Rolex",model:"GMT-Master II",variant:"Pepsi Esfera Plateada",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-pepsi-esfera-plateada",desc:"GMT-Master II automatico Pepsi con bisel rojo y azul. Esfera plateada. Movimiento automatico.",video:"relojes/videos/gmt-master-pepsi-esfera-plateada"},
+  {brand:"Rolex",model:"GMT-Master II",variant:"Acero Negro Jubilee",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/gmt-master-steel-negro-jubilee",desc:"GMT-Master II automatico acero con bisel negro. Brazalete Jubilee. Movimiento automatico.",video:"relojes/videos/gmt-master-steel-negro-jubilee"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Gold Champagne - Baston Jubilee",price:"$ 230.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-gold-champagne-baston-jubilee",desc:"Sky-Dweller automatico gold con esfera champagne y baston. Brazalete Jubilee dorado. Doble huso horario.",video:"relojes/videos/sky-dweller-gold-champagne-baston-jubilee"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Gold Esfera Champagne",price:"$ 230.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-gold-esfera-champagne",desc:"Sky-Dweller automatico gold con esfera champagne. Brazalete President dorado. Doble huso horario.",video:"relojes/videos/sky-dweller-gold-esfera-champagne"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Gold Full Esfera Dorada",price:"$ 230.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-gold-esfera-dorada-full",desc:"Sky-Dweller automatico gold full con esfera dorada. Maximo lujo. Doble huso horario.",video:"relojes/videos/sky-dweller-gold-esfera-dorada-full"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Gold Full Esfera Negra",price:"$ 230.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-gold-esfera-negra-full",desc:"Sky-Dweller automatico gold full con esfera negra. Elegancia oscura. Doble huso horario.",video:"relojes/videos/sky-dweller-gold-esfera-negra-full"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Acero Esfera Negra",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-steel-esfera-negra",desc:"Sky-Dweller automatico acero con esfera negra. Doble huso horario. Movimiento automatico.",video:"relojes/videos/sky-dweller-steel-esfera-negra"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Acero Esfera Plateada",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-steel-esfera-plateada",desc:"Sky-Dweller automatico acero con esfera plateada. Doble huso horario. Movimiento automatico.",video:"relojes/videos/sky-dweller-steel-esfera-plateada"},
+  {brand:"Rolex",model:"Sky-Dweller",variant:"Acero Esfera Verde",price:"$ 220.000",status:"disponible",img:CLD_AAA+"relojes/fotos/sky-dweller-steel-esfera-verde",desc:"Sky-Dweller automatico acero con esfera verde. Doble huso horario. Movimiento automatico.",video:"relojes/videos/sky-dweller-steel-esfera-verde"},
+  {brand:"Rolex",model:"Submariner",variant:"Gold Full Esfera Negra",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-gold-esfera-negra-full",desc:"Submariner automatico gold full con esfera negra. El buzo de lujo por excelencia.",video:"relojes/videos/submariner-gold-esfera-negra-full"},
+  {brand:"Rolex",model:"Submariner",variant:"Gold Esfera Negra y Plateada",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-gold-esfera-negra-plateada",desc:"Submariner automatico gold con esfera negra y plateada. Combinacion clasica en caja dorada.",video:"relojes/videos/submariner-gold-esfera-negra-plateada"},
+  {brand:"Rolex",model:"Submariner",variant:"Gold Full Esfera Verde",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-gold-esfera-verde-full",desc:"Submariner automatico gold full con esfera verde. El Hulk en version dorada.",video:"relojes/videos/submariner-gold-esfera-verde-full"},
+  {brand:"Rolex",model:"Submariner",variant:"Gold Verde Clasico Bisel",price:"$ 225.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-gold-verde-clasico-bisel",desc:"Submariner automatico gold con esfera y bisel verde clasico. El verde dorado mas buscado.",video:"relojes/videos/submariner-gold-verde-clasico-bisel"},
+  {brand:"Rolex",model:"Submariner",variant:"Label Noir Esfera Crema",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-labelnoir-esfera-crema",desc:"Submariner Label Noir con esfera crema. Acabados exclusivos de alta gama. Movimiento automatico.",video:"relojes/videos/submariner-labelnoir-esfera-crema"},
+  {brand:"Rolex",model:"Submariner",variant:"Label Noir Esfera Negra",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-labelnoir-esfera-negra",desc:"Submariner Label Noir con esfera negra. Acabados exclusivos de alta gama. Movimiento automatico.",video:"relojes/videos/submariner-labelnoir-esfera-negra"},
+  {brand:"Rolex",model:"Submariner",variant:"Label Noir Acero Clasico",price:"$ 215.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-labelnoir-steel-clasico",desc:"Submariner Label Noir acero clasico. Acabados exclusivos sin adornos. Movimiento automatico."},
+  {brand:"Rolex",model:"Submariner",variant:"Acero Esfera Negra Baston",price:"$ 200.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-esfera-negra-baston",desc:"Submariner automatico acero con esfera negra y baston. El clasico negro en automatico.",video:"relojes/videos/submariner-steel-esfera-negra-baston"},
+  {brand:"Rolex",model:"Submariner",variant:"Acero Verde Hulk Ceramica",price:"$ 200.000",status:"disponible",img:CLD_AAA+"relojes/fotos/submariner-steel-verde-hulk-ceramica",desc:"Submariner automatico acero con esfera y bisel verde ceramica. El Hulk con bisel ceramico.",video:"relojes/videos/submariner-steel-verde-hulk-ceramica"},
+  /* ── TAG HEUER ── */
+  {brand:"Tag Heuer",model:"Carrera",variant:"Acero Esfera Negra Crono",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/carrera-steel-esfera-negra-crono.jpg",desc:"Carrera cronografo acero con esfera negra. Precision suiza al servicio de la velocidad."},
+  {brand:"Tag Heuer",model:"Carrera",variant:"Acero Negra - Segundero Rojo",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/carrera-steel-negra-segundero-rojo",desc:"Carrera acero con esfera negra y segundero rojo. Deportivo y elegante. Precision suiza."},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Amarilla Rubber",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-amarilla-rubber-amarillo",desc:"Formula 1 cronografo con esfera amarilla y correa rubber amarilla. El mas audaz de la coleccion.",video:"relojes/videos/formula1-crono-amarilla-rubber-amarillo"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Amarilla Acero",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-esfera-amarilla-steel",desc:"Formula 1 cronografo acero con esfera amarilla. Inspirado en la maxima velocidad.",video:"relojes/videos/formula1-crono-esfera-amarilla-steel"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Naranja Acero",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-esfera-naranja-steel",desc:"Formula 1 cronografo acero con esfera naranja. Impacto visual maximo en la pista."},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Negra Tachymetre",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-esfera-negra-tachymetre",desc:"Formula 1 cronografo con esfera negra y tachymetro. Mide velocidades hasta 400 km/h.",video:"relojes/videos/formula1-crono-esfera-negra-tachymetre"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Roja Rubber",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-esfera-roja-rubber",desc:"Formula 1 cronografo con esfera roja y correa rubber. Energia y velocidad en tu muneca.",video:"relojes/videos/formula1-crono-esfera-roja-rubber"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Roja Tachymetre",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-esfera-roja-tachymetre",desc:"Formula 1 cronografo con esfera roja y tachymetro. El rojo de la velocidad.",video:"relojes/videos/formula1-crono-esfera-roja-tachymetre"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Crono Verde Rubber",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-crono-verde-rubber-verde",desc:"Formula 1 cronografo verde con correa rubber. Para los que piensan diferente.",video:"relojes/videos/formula1-crono-verde-rubber-verde"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Kimi Azul Bracelet",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-kimi-esfera-azul-bracelet",desc:"Formula 1 Kimi edicion especial con esfera azul y brazalete. Homenaje al piloto legendario.",video:"relojes/videos/formula1-kimi-esfera-azul-bracelet"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Kimi Negra Acero",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-kimi-esfera-negra-steel",desc:"Formula 1 Kimi edicion especial con esfera negra y caja acero. Elegancia deportiva.",video:"relojes/videos/formula1-kimi-esfera-negra-steel"},
+  {brand:"Tag Heuer",model:"Formula 1",variant:"Acero Verde Crono",price:"$ 280.000",status:"disponible",img:CLD_AAA+"relojes/fotos/formula1-steel-esfera-verde-crono",desc:"Formula 1 cronografo acero con esfera verde. Deportivo y fresco. Precision suiza."},
   {brand:"Patek Philippe",model:"Nautilus Acero Azul",variant:"Esfera Azul - Caja Acero",price:"$ 215.000",status:"disponible",img:CLD+"764c8278-3d46-4473-b9b9-71ef31274288_jmfuvy.jpg",desc:"El Nautilus en acero con esfera azul oscuro. El reloj mas buscado del mercado. Movimiento automatico."},
   {brand:"Patek Philippe",model:"Nautilus Gold",variant:"Esfera Dorada - Caja Gold",price:"$ 215.000",status:"disponible",img:CLD+"8177cc18-7f9f-4c5f-b5f8-dacea15617b1_lv42zs.jpg",desc:"El Nautilus completamente bañado en oro con esfera dorada. Lujo discreto en su maxima expresion."},
   {brand:"Patek Philippe",model:"Nautilus Bicolor",variant:"Esfera Azul/Dorada - Acero y Gold",price:"$ 215.000",status:"disponible",img:CLD+"7a5b4f08-13f6-4e1c-ba39-42159e519fed_cwc1fy.jpg",desc:"El Nautilus bicolor, combinacion perfecta entre acero y oro. Esfera azul con indices dorados."},
@@ -678,8 +966,20 @@ function buildGrid(gridId, brand) {
     var idx = ALL.indexOf(w);
     var topClass = brand === "Patek Philippe" ? " patek" : brand === "Cartier" ? " cartier" : "";
     h += "<div class=\"card\" onclick=\"openModal("+idx+")\">";
-    var imgClass = brand === "Rolex AAA+" ? "card-img aaa" : "card-img";
-    h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
+    var imgClass = "card-img";
+    var vidClass = "card-vid";
+    if (w.video) {
+      h += "<div class=\"card-media\">";
+      h += "<div class=\"card-slides\">";
+      h += "<div class=\"card-slide\"><img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\"></div>";
+      h += "<div class=\"card-slide\"><video class=\""+vidClass+"\" src=\""+CLDV+w.video+"\" poster=\""+w.img+"\" muted loop playsinline preload=\"none\"></video></div>";
+      h += "</div>";
+      h += "<div class=\"swipe-dots\"><div class=\"swipe-dot active\"></div><div class=\"swipe-dot\"></div></div>";
+      h += "<div class=\"swipe-hint\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"white\"><path d=\"M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z\"/></svg>ver video</div>";
+      h += "</div>";
+    } else {
+      h += "<img class=\""+imgClass+"\" src=\""+w.img+"\" alt=\""+w.model+"\" loading=\"lazy\">";
+    }
     if (w.status === "vendido") h += "<div class=\"sold-badge\">VENDIDO</div>";
     h += "<div class=\"card-top"+topClass+"\"></div>";
     h += "<div class=\"card-info\">";
@@ -700,9 +1000,75 @@ function render() {
   buildGrid("grid-rolex", "Rolex");
   buildGrid("grid-patek", "Patek Philippe");
   buildGrid("grid-cartier", "Cartier");
+  buildGrid("grid-tag", "Tag Heuer");
+  initCardSwipes();
+}
+
+function initCardSwipes() {
+  var vidObserver = (typeof IntersectionObserver !== "undefined") ? new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var vid = entry.target.querySelector(".card-vid");
+        if (vid && vid.getAttribute("preload") !== "auto") {
+          vid.setAttribute("preload", "auto");
+        }
+        vidObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: "1000px 0px" }) : null;
+
+  document.querySelectorAll(".card-media").forEach(function(media) {
+    if (vidObserver) { vidObserver.observe(media); }
+    var slides = media.querySelector(".card-slides");
+    var video = media.querySelector(".card-vid");
+    var dots = media.querySelectorAll(".swipe-dot");
+    var hint = media.querySelector(".swipe-hint");
+    var swiped = false;
+    var startX = 0;
+    var dx = 0;
+
+    function hideHint() {
+      if (hint) { hint.classList.add("gone"); }
+    }
+    function goVideo() {
+      slides.style.transform = "translateX(-100%)";
+      var p = video.play();
+      if (p && p.catch) { p.catch(function(){}); }
+      swiped = true;
+      hideHint();
+      if (dots[0]) { dots[0].classList.remove("active"); }
+      if (dots[1]) { dots[1].classList.add("active"); }
+    }
+    function goImage() {
+      slides.style.transform = "translateX(0)";
+      video.pause();
+      swiped = false;
+      if (dots[0]) { dots[0].classList.add("active"); }
+      if (dots[1]) { dots[1].classList.remove("active"); }
+    }
+
+    if (dots[0]) { dots[0].addEventListener("click", function(e) { e.stopPropagation(); goImage(); }); }
+    if (dots[1]) { dots[1].addEventListener("click", function(e) { e.stopPropagation(); goVideo(); }); }
+
+    media.addEventListener("touchstart", function(e) {
+      startX = e.touches[0].clientX;
+      dx = 0;
+    }, {passive: true});
+    media.addEventListener("touchmove", function(e) {
+      dx = e.touches[0].clientX - startX;
+    }, {passive: true});
+    media.addEventListener("touchend", function(e) {
+      if (Math.abs(dx) > 20) {
+        _didSwipe = true;
+        if (dx < 0 && !swiped) { goVideo(); }
+        else if (dx > 0 && swiped) { goImage(); }
+      }
+    });
+  });
 }
 
 function openModal(i) {
+  if (_didSwipe) { _didSwipe = false; return; }
   var w = ALL[i];
   var bc = {"Rolex":"linear-gradient(90deg,#9A7A2E,#E8C96A)","Patek Philippe":"linear-gradient(90deg,#3B5998,#6495ED)","Cartier":"linear-gradient(90deg,#991B1B,#EF4444)"};
   document.getElementById("mImg").src = w.img;
@@ -712,8 +1078,33 @@ function openModal(i) {
   document.getElementById("mVariant").textContent = w.variant;
   document.getElementById("mDesc").textContent = w.desc;
   document.getElementById("mPrice").textContent = w.price;
-  var msg = encodeURIComponent("Hola! Me interesa este reloj, lo tenes disponible aun?\n\n"+w.img);
+  var msg = encodeURIComponent(
+    "Hola! Vi el catalogo de 24Import y me interesa este reloj:\n\n" +
+    "*" + w.brand + " — " + w.model + "*\n" +
+    w.variant + "\n" +
+    w.price + "\n\n" +
+    "Lo tenes disponible?\n\n" +
+    "Foto: " + w.img
+  );
   document.getElementById("mWa").href = "https://wa.me/"+WA+"?text="+msg;
+  var slidesInner = document.getElementById("mSlidesInner");
+  var vidSlide = document.getElementById("mVidSlide");
+  var mDots = document.getElementById("mModalDots");
+  var mVid = document.getElementById("mVid");
+  slidesInner.style.transform = "translateX(0)";
+  document.getElementById("mDot0").classList.add("active");
+  document.getElementById("mDot1").classList.remove("active");
+  if (w.video) {
+    mVid.src = CLDV + w.video;
+    vidSlide.style.display = "";
+    mDots.style.display = "";
+    initModalSwipe(slidesInner, mVid);
+  } else {
+    mVid.pause();
+    mVid.src = "";
+    vidSlide.style.display = "none";
+    mDots.style.display = "none";
+  }
   document.getElementById("modalBg").classList.add("open");
   document.getElementById("modalBg").scrollTop = 0;
   document.body.style.overflow = "hidden";
@@ -721,8 +1112,30 @@ function openModal(i) {
 function closeModal() {
   document.getElementById("modalBg").classList.remove("open");
   document.body.style.overflow = "";
+  var mVid = document.getElementById("mVid");
+  mVid.pause();
+  mVid.src = "";
+  document.getElementById("mSlidesInner").style.transform = "translateX(0)";
+  document.getElementById("mDot0").classList.add("active");
+  document.getElementById("mDot1").classList.remove("active");
+}
+
+function initModalSwipe(slidesInner, video) {
+  var wrap = document.getElementById("mMediaWrap");
+  var dot0 = document.getElementById("mDot0");
+  var dot1 = document.getElementById("mDot1");
+  var mSwiped = false;
+  var startX = 0, dx = 0;
+  function goVid() { slidesInner.style.transform="translateX(-100%)"; video.play(); mSwiped=true; dot0.classList.remove("active"); dot1.classList.add("active"); }
+  function goImg() { slidesInner.style.transform="translateX(0)"; video.pause(); mSwiped=false; dot0.classList.add("active"); dot1.classList.remove("active"); }
+  dot0.onclick = function(e){ e.stopPropagation(); goImg(); };
+  dot1.onclick = function(e){ e.stopPropagation(); goVid(); };
+  wrap.ontouchstart = function(e){ startX=e.touches[0].clientX; dx=0; };
+  wrap.ontouchmove = function(e){ dx=e.touches[0].clientX-startX; };
+  wrap.ontouchend = function(e){ if(Math.abs(dx)>20){ if(dx<0&&!mSwiped) goVid(); else if(dx>0&&mSwiped) goImg(); } };
 }
 document.getElementById("modalBg").addEventListener("click", function(e){ if(e.target===this) closeModal(); });
+
 
 function openLogin() { document.getElementById("loginOverlay").classList.add("open"); }
 function closeLogin() {
@@ -811,6 +1224,8 @@ function delWatch(i) {
   toast("Reloj eliminado");
 }
 
+var _didSwipe = false;
+
 var newImgData = null;
 function previewNew(e) {
   var file = e.target.files[0];
@@ -859,6 +1274,29 @@ function toast(msg) {
 var currentFilter = "all";
 var currentSearch = "";
 
+function scrollTCard(idx) {
+  var track = document.getElementById("tTrack");
+  var cards = track.querySelectorAll(".tcard");
+  if (!cards[idx]) return;
+  track.scrollTo({ left: cards[idx].offsetLeft - 18, behavior: "smooth" });
+  document.querySelectorAll(".tdot").forEach(function(d,i){ d.classList.toggle("active", i===idx); });
+}
+(function() {
+  var track = document.getElementById("tTrack");
+  if (!track) return;
+  track.addEventListener("scroll", function() {
+    var cards = track.querySelectorAll(".tcard");
+    var scrollLeft = track.scrollLeft;
+    var closest = 0;
+    var minDist = Infinity;
+    cards.forEach(function(c, i) {
+      var dist = Math.abs(c.offsetLeft - 18 - scrollLeft);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    document.querySelectorAll(".tdot").forEach(function(d,i){ d.classList.toggle("active", i===closest); });
+  }, { passive: true });
+})();
+
 function toggleSearch() {
   document.getElementById("searchWrap").classList.toggle("open");
   if (document.getElementById("searchWrap").classList.contains("open")) {
@@ -883,7 +1321,8 @@ function applyFilters() {
     {brand:"Rolex AAA+", grid:"grid-rolex-aaa", parent:"Rolex"},
     {brand:"Rolex", grid:"grid-rolex"},
     {brand:"Patek Philippe", grid:"grid-patek"},
-    {brand:"Cartier", grid:"grid-cartier"}
+    {brand:"Cartier", grid:"grid-cartier"},
+    {brand:"Tag Heuer", grid:"grid-tag"}
   ];
   sections.forEach(function(s) {
     var grid = document.getElementById(s.grid);
