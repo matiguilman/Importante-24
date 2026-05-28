@@ -40,7 +40,11 @@ export function WatchCard({ watch }: WatchCardProps) {
   }
 
   const whatsappMessage = encodeURIComponent(
-    `Hola! Me interesa el modelo ${watch.name}. ¿Podrían darme más información?`
+    `Hola! Vi el catalogo de 24Import y me interesa este reloj:\n\n` +
+    `*${watch.brand} — ${watch.name}*\n` +
+    `${watch.price ?? ""}\n\n` +
+    `Lo tenes disponible?\n\n` +
+    `Foto: ${watch.image}`
   )
 
   return (
