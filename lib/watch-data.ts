@@ -10,6 +10,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-azul-baguette-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-azul-baguette-oyster",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-azul-baston-estriado",
@@ -17,6 +18,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-azul-baston-estriado",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-azul-baston-estriado",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-champagne-baston-estriado",
@@ -24,6 +26,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-champagne-baston-estriado",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-champagne-baston-estriado",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-esfera-azul-romano",
@@ -31,6 +34,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-esfera-azul-romano",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-esfera-azul-romano",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-morada-baston-estriado",
@@ -38,6 +42,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-morada-baston-estriado",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-morada-baston-estriado",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-plateada-baston-estriado",
@@ -45,6 +50,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-plateada-baston-estriado",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-plateada-baston-estriado",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-plateada-baston-oyster",
@@ -52,6 +58,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-plateada-baston-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-plateada-baston-oyster",
+    price: "$ 165.000",
   },
   {
     id: "datejust-bicolor-verde-baston-oyster",
@@ -59,6 +66,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-bicolor-verde-baston-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-bicolor-verde-baston-oyster",
+    price: "$ 165.000",
   },
   {
     id: "datejust-gold-azul-baston-jubilee",
@@ -66,12 +74,14 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-azul-baston-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-azul-baston-jubilee",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-champagne-baston",
     name: "Datejust Gold Champagne Baston",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-champagne-baston",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-esfera-azul-romano",
@@ -79,18 +89,21 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-esfera-azul-romano",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-esfera-azul-romano",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-esfera-blanca-baston",
     name: "Datejust Gold Esfera Blanca Baston",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-esfera-blanca-baston",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-esfera-blanca-v2",
     name: "Datejust Gold Esfera Blanca V2",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-esfera-blanca-v2",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-morada-baston-estriado",
@@ -98,6 +111,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-morada-baston-estriado",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-morada-baston-estriado",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-plateada-baston-estriado",
@@ -105,6 +119,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-plateada-baston-estriado",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-plateada-baston-estriado",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-plateada-romano-president",
@@ -112,6 +127,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-plateada-romano-president",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-plateada-romano-president",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-tiffany-motivo-panal",
@@ -119,6 +135,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-tiffany-motivo-panal",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-tiffany-motivo-panal",
+    price: "$ 170.000",
   },
   {
     id: "datejust-gold-verde-baston-president",
@@ -126,18 +143,21 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-verde-baston-president",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-verde-baston-president",
+    price: "$ 170.000",
   },
   {
     id: "datejust-steel-esfera-negra-romano",
     name: "Datejust Steel Esfera Negra Romano",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-steel-esfera-negra-romano",
+    price: "$ 160.000",
   },
   {
     id: "datejust-steel-negra-baston-estriado",
     name: "Datejust Steel Negra Baston Estriado",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-steel-negra-baston-estriado",
+    price: "$ 160.000",
   },
   {
     id: "datejust-steel-plateada-diamantes-jubilee",
@@ -145,6 +165,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-steel-plateada-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-steel-plateada-diamantes-jubilee",
+    price: "$ 160.000",
   },
   {
     id: "day-date-bicolor-azul-baguette-viernes",
@@ -152,6 +173,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-azul-baguette-viernes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-azul-baguette-viernes",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-azul-diamantes-jubilee",
@@ -159,6 +181,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-azul-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-azul-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-azul-diamantes-oyster",
@@ -166,6 +189,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-azul-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-azul-diamantes-oyster",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-champagne-diamantes-jubilee",
@@ -173,6 +197,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-champagne-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-champagne-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-champagne-romano",
@@ -180,6 +205,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-champagne-romano",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-champagne-romano",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-esfera-azul-baston",
@@ -187,6 +213,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-esfera-azul-baston",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-esfera-azul-baston",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-esfera-azul-romano",
@@ -194,6 +221,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-esfera-azul-romano",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-esfera-azul-romano",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-esfera-morada",
@@ -201,18 +229,21 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-esfera-morada",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-esfera-morada",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-morada-diamantes-oyster",
     name: "Day Date Bicolor Morada Diamantes Oyster",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-morada-diamantes-oyster",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-negra-diamantes-smooth",
     name: "Day Date Bicolor Negra Diamantes Smooth",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-negra-diamantes-smooth",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-plateada-diamantes-jubilee",
@@ -220,6 +251,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-plateada-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-plateada-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-plateada-diamantes-oyster",
@@ -227,6 +259,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-plateada-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-plateada-diamantes-oyster",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-tiffany-diamantes-jubilee",
@@ -234,6 +267,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-tiffany-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-tiffany-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-tiffany-diamantes-oyster",
@@ -241,6 +275,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-tiffany-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-tiffany-diamantes-oyster",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-turquesa-marmol",
@@ -248,6 +283,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-turquesa-marmol",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-turquesa-marmol",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-verde-diamantes-jubilee",
@@ -255,12 +291,14 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-verde-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-verde-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-bicolor-verde-menta",
     name: "Day Date Bicolor Verde Menta",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-verde-menta",
+    price: "$ 165.000",
   },
   {
     id: "day-date-gold-azul-diamantes-oyster",
@@ -268,6 +306,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-azul-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-azul-diamantes-oyster",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-azul-diamantes-president",
@@ -275,6 +314,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-azul-diamantes-president",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-azul-diamantes-president",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-champagne-baston",
@@ -282,6 +322,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-champagne-baston",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-champagne-baston",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-champagne-romano",
@@ -289,6 +330,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-champagne-romano",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-champagne-romano",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-esfera-morada",
@@ -296,6 +338,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-esfera-morada",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-esfera-morada",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-esfera-turquesa",
@@ -303,6 +346,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-esfera-turquesa",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-esfera-turquesa",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-marmol-negro",
@@ -310,6 +354,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-marmol-negro",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-marmol-negro",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-negra-diamantes-oversize",
@@ -317,6 +362,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-negra-diamantes-oversize",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-negra-diamantes-oversize",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-negra-diamantes-president",
@@ -324,6 +370,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-negra-diamantes-president",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-negra-diamantes-president",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-plateada-romano-miercoles",
@@ -331,6 +378,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-plateada-romano-miercoles",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-plateada-romano-miercoles",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-verde-diamantes-oyster",
@@ -338,6 +386,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-verde-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-verde-diamantes-oyster",
+    price: "$ 170.000",
   },
   {
     id: "day-date-gold-verde-diamantes-president",
@@ -345,6 +394,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-verde-diamantes-president",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-verde-diamantes-president",
+    price: "$ 170.000",
   },
   {
     id: "day-date-steel-azul-cobalt-diamantes",
@@ -352,18 +402,21 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-azul-cobalt-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-azul-cobalt-diamantes",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-azul-diamantes-jubilee",
     name: "Day Date Steel Azul Diamantes Jubilee",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-azul-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-gradiente-rojo-negro",
     name: "Day Date Steel Gradiente Rojo Negro",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-gradiente-rojo-negro",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-marmol-negro",
@@ -371,18 +424,21 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-marmol-negro",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-marmol-negro",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-negra-diamantes-jubilee",
     name: "Day Date Steel Negra Diamantes Jubilee",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-negra-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-negra-diamantes-president",
     name: "Day Date Steel Negra Diamantes President",
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-negra-diamantes-president",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-plateada-diamantes-jubilee",
@@ -390,6 +446,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-plateada-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-plateada-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-plateada-diamantes-oyster",
@@ -397,6 +454,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-plateada-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-plateada-diamantes-oyster",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-plateada-diamantes-president",
@@ -404,6 +462,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-plateada-diamantes-president",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-plateada-diamantes-president",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-tiffany-diamantes-oyster",
@@ -411,6 +470,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-tiffany-diamantes-oyster",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-tiffany-diamantes-oyster",
+    price: "$ 165.000",
   },
   {
     id: "day-date-steel-verde-diamantes-jubilee",
@@ -418,6 +478,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-verde-diamantes-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-verde-diamantes-jubilee",
+    price: "$ 165.000",
   },
   {
     id: "gmt-master-batman-esfera-negra",
@@ -425,6 +486,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-batman-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-batman-esfera-negra",
+    price: "$ 170.000",
   },
   {
     id: "gmt-master-bicolor-esfera-azul",
@@ -432,6 +494,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-bicolor-esfera-azul",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-bicolor-esfera-azul",
+    price: "$ 170.000",
   },
   {
     id: "gmt-master-bicolor-esfera-blanca",
@@ -439,6 +502,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-bicolor-esfera-blanca",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-bicolor-esfera-blanca",
+    price: "$ 170.000",
   },
   {
     id: "gmt-master-steel-esfera-azul-total",
@@ -446,6 +510,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-steel-esfera-azul-total",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-steel-esfera-azul-total",
+    price: "$ 170.000",
   },
   {
     id: "gmt-master-steel-esfera-negra-blanca",
@@ -453,6 +518,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-steel-esfera-negra-blanca",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-steel-esfera-negra-blanca",
+    price: "$ 170.000",
   },
   {
     id: "sky-dweller-bicolor-negra-baston-jubilee",
@@ -460,6 +526,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-bicolor-negra-baston-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-bicolor-negra-baston-jubilee",
+    price: "$ 175.000",
   },
   {
     id: "sky-dweller-bicolor-tiffany-baston",
@@ -467,6 +534,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-bicolor-tiffany-baston",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-bicolor-tiffany-baston",
+    price: "$ 175.000",
   },
   {
     id: "sky-dweller-gold-azul-baston-jubilee",
@@ -474,6 +542,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-gold-azul-baston-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-gold-azul-baston-jubilee",
+    price: "$ 175.000",
   },
   {
     id: "submariner-bicolor-esfera-azul-bicolor",
@@ -481,6 +550,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-bicolor-esfera-azul-bicolor",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-bicolor-esfera-azul-bicolor",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-esfera-azul-intenso",
@@ -488,6 +558,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-azul-intenso",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-azul-intenso",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-esfera-azul-negro",
@@ -495,6 +566,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-azul-negro",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-azul-negro",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-esfera-blanca-azul",
@@ -502,6 +574,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-blanca-azul",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-blanca-azul",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-esfera-negra-blanco",
@@ -509,6 +582,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-negra-blanco",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-negra-blanco",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-esfera-negra-clasica",
@@ -516,6 +590,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-negra-clasica",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-negra-clasica",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-esfera-verde-negro",
@@ -523,6 +598,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-verde-negro",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-verde-negro",
+    price: "$ 165.000",
   },
   {
     id: "submariner-steel-verde-hulk-clasico",
@@ -530,6 +606,7 @@ export const rolexAAAWatches: Watch[] = [
     brand: "Rolex AAA+",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-verde-hulk-clasico",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-verde-hulk-clasico",
+    price: "$ 165.000",
   }
 ]
 
@@ -541,6 +618,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-gold-esfera-negra-rayada",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-gold-esfera-negra-rayada",
+    price: "$ 200.000",
   },
   {
     id: "datejust-steel-esfera-nacar-diamantes",
@@ -548,6 +626,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-steel-esfera-nacar-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-steel-esfera-nacar-diamantes",
+    price: "$ 200.000",
   },
   {
     id: "datejust-steel-negro-indices-diamantes",
@@ -555,6 +634,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/datejust-steel-negro-indices-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/datejust-steel-negro-indices-diamantes",
+    price: "$ 200.000",
   },
   {
     id: "day-date-bicolor-champagne-diamantes",
@@ -562,6 +642,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-champagne-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-champagne-diamantes",
+    price: "$ 210.000",
   },
   {
     id: "day-date-bicolor-negra-diamantes",
@@ -569,6 +650,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-negra-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-negra-diamantes",
+    price: "$ 210.000",
   },
   {
     id: "day-date-bicolor-plateada-diamantes",
@@ -576,6 +658,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-bicolor-plateada-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-bicolor-plateada-diamantes",
+    price: "$ 210.000",
   },
   {
     id: "day-date-gold-candy-edicion-especial",
@@ -583,6 +666,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-gold-candy-edicion-especial",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-gold-candy-edicion-especial",
+    price: "$ 210.000",
   },
   {
     id: "day-date-steel-candy-edicion-especial",
@@ -590,6 +674,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-candy-edicion-especial",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-candy-edicion-especial",
+    price: "$ 210.000",
   },
   {
     id: "day-date-steel-rosa-diamantes",
@@ -597,6 +682,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/day-date-steel-rosa-diamantes",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/day-date-steel-rosa-diamantes",
+    price: "$ 210.000",
   },
   {
     id: "daytona-bicolor-esfera-blanca-crono",
@@ -604,6 +690,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-bicolor-esfera-blanca-crono",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-bicolor-esfera-blanca-crono",
+    price: "$ 220.000",
   },
   {
     id: "daytona-gold-esfera-dorada-full",
@@ -611,6 +698,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-gold-esfera-dorada-full",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-gold-esfera-dorada-full",
+    price: "$ 225.000",
   },
   {
     id: "daytona-gold-rubber-esfera-champagne",
@@ -618,6 +706,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-gold-rubber-esfera-champagne",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-gold-rubber-esfera-champagne",
+    price: "$ 225.000",
   },
   {
     id: "daytona-steel-esfera-negra-blanca",
@@ -625,6 +714,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-steel-esfera-negra-blanca",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-steel-esfera-negra-blanca",
+    price: "$ 220.000",
   },
   {
     id: "daytona-steel-esfera-negra-crono",
@@ -632,6 +722,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-steel-esfera-negra-crono",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-steel-esfera-negra-crono",
+    price: "$ 220.000",
   },
   {
     id: "daytona-steel-rubber-esfera-gris",
@@ -639,6 +730,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-steel-rubber-esfera-gris",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-steel-rubber-esfera-gris",
+    price: "$ 220.000",
   },
   {
     id: "daytona-steel-rubber-esfera-negra",
@@ -646,6 +738,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/daytona-steel-rubber-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/daytona-steel-rubber-esfera-negra",
+    price: "$ 220.000",
   },
   {
     id: "gmt-master-bicolor-esfera-negra",
@@ -653,6 +746,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-bicolor-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-bicolor-esfera-negra",
+    price: "$ 215.000",
   },
   {
     id: "gmt-master-coke-esfera-negra",
@@ -660,6 +754,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-coke-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-coke-esfera-negra",
+    price: "$ 215.000",
   },
   {
     id: "gmt-master-gold-esfera-negra-full",
@@ -667,6 +762,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-gold-esfera-negra-full",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-gold-esfera-negra-full",
+    price: "$ 225.000",
   },
   {
     id: "gmt-master-pepsi-esfera-negra",
@@ -674,6 +770,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-pepsi-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-pepsi-esfera-negra",
+    price: "$ 215.000",
   },
   {
     id: "gmt-master-pepsi-esfera-plateada",
@@ -681,6 +778,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-pepsi-esfera-plateada",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-pepsi-esfera-plateada",
+    price: "$ 215.000",
   },
   {
     id: "gmt-master-steel-negro-jubilee",
@@ -688,6 +786,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/gmt-master-steel-negro-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/gmt-master-steel-negro-jubilee",
+    price: "$ 215.000",
   },
   {
     id: "sky-dweller-gold-champagne-baston-jubilee",
@@ -695,6 +794,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-gold-champagne-baston-jubilee",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-gold-champagne-baston-jubilee",
+    price: "$ 230.000",
   },
   {
     id: "sky-dweller-gold-esfera-champagne",
@@ -702,6 +802,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-gold-esfera-champagne",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-gold-esfera-champagne",
+    price: "$ 230.000",
   },
   {
     id: "sky-dweller-gold-esfera-dorada-full",
@@ -709,6 +810,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-gold-esfera-dorada-full",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-gold-esfera-dorada-full",
+    price: "$ 230.000",
   },
   {
     id: "sky-dweller-gold-esfera-negra-full",
@@ -716,6 +818,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-gold-esfera-negra-full",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-gold-esfera-negra-full",
+    price: "$ 230.000",
   },
   {
     id: "sky-dweller-steel-esfera-negra",
@@ -723,6 +826,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-steel-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-steel-esfera-negra",
+    price: "$ 220.000",
   },
   {
     id: "sky-dweller-steel-esfera-plateada",
@@ -730,6 +834,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-steel-esfera-plateada",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-steel-esfera-plateada",
+    price: "$ 220.000",
   },
   {
     id: "sky-dweller-steel-esfera-verde",
@@ -737,6 +842,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/sky-dweller-steel-esfera-verde",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/sky-dweller-steel-esfera-verde",
+    price: "$ 220.000",
   },
   {
     id: "submariner-gold-esfera-negra-full",
@@ -744,6 +850,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-gold-esfera-negra-full",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-gold-esfera-negra-full",
+    price: "$ 225.000",
   },
   {
     id: "submariner-gold-esfera-negra-plateada",
@@ -751,6 +858,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-gold-esfera-negra-plateada",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-gold-esfera-negra-plateada",
+    price: "$ 225.000",
   },
   {
     id: "submariner-gold-esfera-verde-full",
@@ -758,6 +866,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-gold-esfera-verde-full",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-gold-esfera-verde-full",
+    price: "$ 225.000",
   },
   {
     id: "submariner-gold-verde-clasico-bisel",
@@ -765,6 +874,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-gold-verde-clasico-bisel",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-gold-verde-clasico-bisel",
+    price: "$ 225.000",
   },
   {
     id: "submariner-labelnoir-esfera-crema",
@@ -772,6 +882,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-labelnoir-esfera-crema",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-labelnoir-esfera-crema",
+    price: "$ 215.000",
   },
   {
     id: "submariner-labelnoir-esfera-negra",
@@ -779,12 +890,14 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-labelnoir-esfera-negra",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-labelnoir-esfera-negra",
+    price: "$ 215.000",
   },
   {
     id: "submariner-labelnoir-steel-clasico",
     name: "Submariner Labelnoir Steel Clasico",
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-labelnoir-steel-clasico",
+    price: "$ 215.000",
   },
   {
     id: "submariner-steel-esfera-negra-baston",
@@ -792,6 +905,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-esfera-negra-baston",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-esfera-negra-baston",
+    price: "$ 200.000",
   },
   {
     id: "submariner-steel-verde-hulk-ceramica",
@@ -799,6 +913,7 @@ export const rolexAutoWatches: Watch[] = [
     brand: "Rolex AAA+ Automáticos",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/submariner-steel-verde-hulk-ceramica",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/submariner-steel-verde-hulk-ceramica",
+    price: "$ 200.000",
   }
 ]
 
@@ -809,12 +924,14 @@ export const tagHeuerWatches: Watch[] = [
     name: "Carrera Steel Esfera Negra Crono",
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/carrera-steel-esfera-negra-crono.jpg",
+    price: "$ 280.000",
   },
   {
     id: "carrera-steel-negra-segundero-rojo",
     name: "Carrera Steel Negra Segundero Rojo",
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/carrera-steel-negra-segundero-rojo",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-amarilla-rubber-amarillo",
@@ -822,6 +939,7 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-amarilla-rubber-amarillo",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-crono-amarilla-rubber-amarillo",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-esfera-amarilla-steel",
@@ -829,12 +947,14 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-esfera-amarilla-steel",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-crono-esfera-amarilla-steel",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-esfera-naranja-steel",
     name: "Formula 1 Crono Esfera Naranja Steel",
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-esfera-naranja-steel",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-esfera-negra-tachymetre",
@@ -842,6 +962,7 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-esfera-negra-tachymetre",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-crono-esfera-negra-tachymetre",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-esfera-roja-rubber",
@@ -849,6 +970,7 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-esfera-roja-rubber",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-crono-esfera-roja-rubber",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-esfera-roja-tachymetre",
@@ -856,6 +978,7 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-esfera-roja-tachymetre",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-crono-esfera-roja-tachymetre",
+    price: "$ 280.000",
   },
   {
     id: "formula1-crono-verde-rubber-verde",
@@ -863,6 +986,7 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-crono-verde-rubber-verde",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-crono-verde-rubber-verde",
+    price: "$ 280.000",
   },
   {
     id: "formula1-kimi-esfera-azul-bracelet",
@@ -870,6 +994,7 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-kimi-esfera-azul-bracelet",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-kimi-esfera-azul-bracelet",
+    price: "$ 280.000",
   },
   {
     id: "formula1-kimi-esfera-negra-steel",
@@ -877,12 +1002,14 @@ export const tagHeuerWatches: Watch[] = [
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-kimi-esfera-negra-steel",
     video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/formula1-kimi-esfera-negra-steel",
+    price: "$ 280.000",
   },
   {
     id: "formula1-steel-esfera-verde-crono",
     name: "Formula 1 Steel Esfera Verde Crono",
     brand: "Tag Heuer",
     image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/formula1-steel-esfera-verde-crono",
+    price: "$ 280.000",
   }
 ]
 
@@ -895,42 +1022,49 @@ export const patekWatches: Watch[] = [
     name: "Nautilus Acero Azul",
     brand: "Patek Philippe",
     image: CLD + "764c8278-3d46-4473-b9b9-71ef31274288_jmfuvy.jpg",
+    price: "$ 215.000",
   },
   {
     id: "patek-nautilus-gold",
     name: "Nautilus Gold",
     brand: "Patek Philippe",
     image: CLD + "8177cc18-7f9f-4c5f-b5f8-dacea15617b1_lv42zs.jpg",
+    price: "$ 215.000",
   },
   {
     id: "patek-nautilus-bicolor",
     name: "Nautilus Bicolor",
     brand: "Patek Philippe",
     image: CLD + "7a5b4f08-13f6-4e1c-ba39-42159e519fed_cwc1fy.jpg",
+    price: "$ 215.000",
   },
   {
     id: "patek-nautilus-acero-plateado",
     name: "Nautilus Acero Plateado",
     brand: "Patek Philippe",
     image: CLD + "b6c029ff-ad90-4d2c-adcd-78e60a95abc5_k3tldc.jpg",
+    price: "$ 215.000",
   },
   {
     id: "patek-nautilus-rojo",
     name: "Nautilus Rojo",
     brand: "Patek Philippe",
     image: CLD + "79a0f9bc-773f-40a3-b1ef-cbd60154f923_ld6bsm.jpg",
+    price: "$ 215.000",
   },
   {
     id: "patek-nautilus-gold-plateado",
     name: "Nautilus Gold Plateado",
     brand: "Patek Philippe",
     image: CLD + "e002b2d2-b4f7-4d36-8ceb-bb349e58ba56_in6fxk.jpg",
+    price: "$ 215.000",
   },
   {
     id: "patek-nautilus-acero-azul-oscuro",
     name: "Nautilus Acero Azul Oscuro",
     brand: "Patek Philippe",
     image: CLD + "daa7cccc-53bb-4ef2-80a2-032951c2c33f_tura3x.jpg",
+    price: "$ 215.000",
   },
 ]
 
@@ -941,11 +1075,13 @@ export const cartierWatches: Watch[] = [
     name: "Santos Cuadrado",
     brand: "Cartier",
     image: CLD + "55286ff8-16e8-4e08-b80f-97b82bdf9ac5_leuggi.jpg",
+    price: "$ 225.000",
   },
   {
     id: "cartier-santos-gold-premium",
     name: "Santos Gold Premium",
     brand: "Cartier",
     image: CLD + "c0440cfa-babe-4fbd-9635-add797c5f815_mclohv.jpg",
+    price: "$ 225.000",
   },
 ]

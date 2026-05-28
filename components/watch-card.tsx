@@ -12,6 +12,7 @@ export interface Watch {
   brand: string
   image: string
   video?: string
+  price?: string
 }
 
 interface WatchCardProps {
@@ -83,7 +84,13 @@ export function WatchCard({ watch }: WatchCardProps) {
         <h3 className="text-sm sm:text-base font-medium text-foreground line-clamp-2 text-balance">
           {watch.name}
         </h3>
-        
+
+        {watch.price && (
+          <p className="text-base font-bold text-primary">
+            {watch.price}
+          </p>
+        )}
+
         {/* Consultar button */}
         <a
           href={`${WHATSAPP_URL}?text=${whatsappMessage}`}
