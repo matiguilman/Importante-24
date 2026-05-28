@@ -1,10 +1,12 @@
 "use client"
 
 import { MessageCircle } from "lucide-react"
-
-const WHATSAPP_URL = "https://wa.me/5491162152890"
+import { useWaNumber } from "@/lib/wa-context"
 
 export function WhatsAppButton() {
+  const waNumber = useWaNumber()
+  const WHATSAPP_URL = `https://wa.me/${waNumber}`
+
   return (
     <a
       href={WHATSAPP_URL}

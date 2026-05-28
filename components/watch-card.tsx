@@ -3,8 +3,7 @@
 import { useState, useRef } from "react"
 import { MessageCircle } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-const WHATSAPP_URL = "https://wa.me/5491162152890"
+import { useWaNumber } from "@/lib/wa-context"
 
 export interface Watch {
   id: string
@@ -22,6 +21,8 @@ interface WatchCardProps {
 export function WatchCard({ watch }: WatchCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const waNumber = useWaNumber()
+  const WHATSAPP_URL = `https://wa.me/${waNumber}`
 
   const handleMouseEnter = () => {
     setIsHovered(true)
