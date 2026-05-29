@@ -923,7 +923,7 @@ export const tagHeuerWatches: Watch[] = [
     id: "carrera-steel-esfera-negra-crono",
     name: "Carrera Steel Esfera Negra Crono",
     brand: "Tag Heuer",
-    image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/carrera-steel-esfera-negra-crono.jpg",
+    image: "https://res.cloudinary.com/dt1lodc8c/image/upload/relojes/fotos/carrera-steel-esfera-negra-crono.jpg",
     price: "$ 280.000",
   },
   {
