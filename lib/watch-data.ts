@@ -1066,6 +1066,30 @@ export const patekWatches: Watch[] = [
     image: CLD + "daa7cccc-53bb-4ef2-80a2-032951c2c33f_tura3x.jpg",
     price: "$ 215.000",
   },
+  {
+    id: "nautilus-annual-calendar-esfera-amarilla",
+    name: "Nautilus Annual Calendar Esfera Amarilla",
+    brand: "Patek Philippe",
+    image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/nautilus-annual-calendar-esfera-amarilla",
+    video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/nautilus-annual-calendar-esfera-amarilla",
+    price: "$ 350.000",
+  },
+  {
+    id: "nautilus-annual-calendar-esfera-negra",
+    name: "Nautilus Annual Calendar Esfera Negra",
+    brand: "Patek Philippe",
+    image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/nautilus-annual-calendar-esfera-negra",
+    video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/nautilus-annual-calendar-esfera-negra",
+    price: "$ 350.000",
+  },
+  {
+    id: "nautilus-annual-calendar-esfera-plateada",
+    name: "Nautilus Annual Calendar Esfera Plateada",
+    brand: "Patek Philippe",
+    image: "https://res.cloudinary.com/dt1lodc8c/image/upload/w_700,h_700,c_fill,g_center,q_auto:best,f_auto/relojes/fotos/nautilus-annual-calendar-esfera-plateada",
+    video: "https://res.cloudinary.com/dt1lodc8c/video/upload/q_auto/relojes/videos/nautilus-annual-calendar-esfera-plateada",
+    price: "$ 350.000",
+  },
 ]
 
 // ── Cartier (2 relojes) ──────────────────────────────────────────────────────
