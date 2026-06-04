@@ -1018,55 +1018,6 @@ const CLD = "https://res.cloudinary.com/dt1lodc8c/image/upload/w_800,c_fill,g_au
 
 export const patekWatches: Watch[] = [
   {
-    id: "patek-nautilus-acero-azul",
-    name: "Nautilus Acero Azul",
-    brand: "Patek Philippe",
-    image: CLD + "764c8278-3d46-4473-b9b9-71ef31274288_jmfuvy.jpg",
-    price: "$ 215.000",
-  },
-  {
-    id: "patek-nautilus-gold",
-    name: "Nautilus Gold",
-    brand: "Patek Philippe",
-    image: CLD + "8177cc18-7f9f-4c5f-b5f8-dacea15617b1_lv42zs.jpg",
-    price: "$ 215.000",
-  },
-  {
-    id: "patek-nautilus-bicolor",
-    name: "Nautilus Bicolor",
-    brand: "Patek Philippe",
-    image: CLD + "7a5b4f08-13f6-4e1c-ba39-42159e519fed_cwc1fy.jpg",
-    price: "$ 215.000",
-  },
-  {
-    id: "patek-nautilus-acero-plateado",
-    name: "Nautilus Acero Plateado",
-    brand: "Patek Philippe",
-    image: CLD + "b6c029ff-ad90-4d2c-adcd-78e60a95abc5_k3tldc.jpg",
-    price: "$ 215.000",
-  },
-  {
-    id: "patek-nautilus-rojo",
-    name: "Nautilus Rojo",
-    brand: "Patek Philippe",
-    image: CLD + "79a0f9bc-773f-40a3-b1ef-cbd60154f923_ld6bsm.jpg",
-    price: "$ 215.000",
-  },
-  {
-    id: "patek-nautilus-gold-plateado",
-    name: "Nautilus Gold Plateado",
-    brand: "Patek Philippe",
-    image: CLD + "e002b2d2-b4f7-4d36-8ceb-bb349e58ba56_in6fxk.jpg",
-    price: "$ 215.000",
-  },
-  {
-    id: "patek-nautilus-acero-azul-oscuro",
-    name: "Nautilus Acero Azul Oscuro",
-    brand: "Patek Philippe",
-    image: CLD + "daa7cccc-53bb-4ef2-80a2-032951c2c33f_tura3x.jpg",
-    price: "$ 215.000",
-  },
-  {
     id: "nautilus-annual-calendar-esfera-amarilla",
     name: "Nautilus Annual Calendar Esfera Amarilla",
     brand: "Patek Philippe",
