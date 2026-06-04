@@ -1,6 +1,6 @@
 import { Watch } from "@/components/watch-card"
 
-export const categories = ["Todos", "Rolex", "Patek Philippe", "Cartier", "Tag Heuer"]
+export const categories = ["Todos", "Rolex", "Patek Philippe", "Omega", "Cartier", "Tag Heuer"]
 
 // ── Rolex AAA+ (77 relojes) ──────────────────────────────────────────
 export const rolexAAAWatches: Watch[] = [
@@ -1107,5 +1107,220 @@ export const cartierWatches: Watch[] = [
     brand: "Cartier",
     image: CLD + "c0440cfa-babe-4fbd-9635-add797c5f815_mclohv.jpg",
     price: "$ 225.000",
+  },
+]
+
+const CLDP = "https://res.cloudinary.com/dt1lodc8c/image/upload/relojes/fotos/"
+const CLDV = "https://res.cloudinary.com/dt1lodc8c/video/upload/relojes/videos/"
+
+// ── Patek Philippe — Nautilus (14 relojes) ───────────────────────────────────
+export const nautilusWatches: Watch[] = [
+  {
+    id: "nautilus-steel-esfera-negra",
+    name: "Nautilus Steel Esfera Negra",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-negra",
+    video: CLDV + "nautilus-steel-esfera-negra",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-steel-esfera-verde",
+    name: "Nautilus Steel Esfera Verde",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-verde",
+    video: CLDV + "nautilus-steel-esfera-verde",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-steel-esfera-azul",
+    name: "Nautilus Steel Esfera Azul",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-azul",
+    video: CLDV + "nautilus-steel-esfera-azul",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-steel-esfera-azul-marino",
+    name: "Nautilus Steel Esfera Azul Marino",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-azul-marino",
+    video: CLDV + "nautilus-steel-esfera-azul-marino",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-steel-esfera-plateada",
+    name: "Nautilus Steel Esfera Plateada",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-plateada",
+    video: CLDV + "nautilus-steel-esfera-plateada",
+    price: "$ 240.000",
+  },
+  {
+    id: "nautilus-steel-esfera-roja",
+    name: "Nautilus Steel Esfera Roja",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-roja",
+    video: CLDV + "nautilus-steel-esfera-roja",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-steel-esfera-gris",
+    name: "Nautilus Steel Esfera Gris",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-steel-esfera-gris",
+    video: CLDV + "nautilus-steel-esfera-gris",
+    price: "$ 240.000",
+  },
+  {
+    id: "nautilus-bicolor-esfera-gris",
+    name: "Nautilus Bicolor Esfera Gris",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-bicolor-esfera-gris",
+    video: CLDV + "nautilus-bicolor-esfera-gris",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-bicolor-esfera-roja",
+    name: "Nautilus Bicolor Esfera Roja",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-bicolor-esfera-roja",
+    video: CLDV + "nautilus-bicolor-esfera-roja",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-bicolor-esfera-plateada",
+    name: "Nautilus Bicolor Esfera Plateada",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-bicolor-esfera-plateada",
+    video: CLDV + "nautilus-bicolor-esfera-plateada",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-bicolor-esfera-champagne",
+    name: "Nautilus Bicolor Esfera Champagne",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-bicolor-esfera-champagne",
+    video: CLDV + "nautilus-bicolor-esfera-champagne",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-gold-esfera-negra",
+    name: "Nautilus Gold Esfera Negra",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-gold-esfera-negra",
+    video: CLDV + "nautilus-gold-esfera-negra",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-gold-esfera-plateada",
+    name: "Nautilus Gold Esfera Plateada",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-gold-esfera-plateada",
+    video: CLDV + "nautilus-gold-esfera-plateada",
+    price: "$ 215.000",
+  },
+  {
+    id: "nautilus-gold-esfera-champagne",
+    name: "Nautilus Gold Esfera Champagne",
+    brand: "Patek Philippe",
+    image: CLDP + "nautilus-gold-esfera-champagne",
+    video: CLDV + "nautilus-gold-esfera-champagne",
+    price: "$ 350.000",
+  },
+]
+
+// ── Patek Philippe — Aquanaut (4 relojes) ────────────────────────────────────
+export const aquanautWatches: Watch[] = [
+  {
+    id: "aquanaut-bicolor-esfera-azul-rubber-azul",
+    name: "Aquanaut Bicolor Esfera Azul Rubber Azul",
+    brand: "Patek Philippe",
+    image: CLDP + "aquanaut-bicolor-esfera-azul-rubber-azul",
+    video: CLDV + "aquanaut-bicolor-esfera-azul-rubber-azul",
+    price: "$ 230.000",
+  },
+  {
+    id: "aquanaut-steel-esfera-verde-rubber-naranja",
+    name: "Aquanaut Steel Esfera Verde Rubber Naranja",
+    brand: "Patek Philippe",
+    image: CLDP + "aquanaut-steel-esfera-verde-rubber-naranja",
+    video: CLDV + "aquanaut-steel-esfera-verde-rubber-naranja",
+    price: "$ 230.000",
+  },
+  {
+    id: "aquanaut-steel-esfera-negra-rubber-negro",
+    name: "Aquanaut Steel Esfera Negra Rubber Negro",
+    brand: "Patek Philippe",
+    image: CLDP + "aquanaut-steel-esfera-negra-rubber-negro",
+    video: CLDV + "aquanaut-steel-esfera-negra-rubber-negro",
+    price: "$ 230.000",
+  },
+  {
+    id: "aquanaut-steel-esfera-azul-rubber-azul",
+    name: "Aquanaut Steel Esfera Azul Rubber Azul",
+    brand: "Patek Philippe",
+    image: CLDP + "aquanaut-steel-esfera-azul-rubber-azul",
+    video: CLDV + "aquanaut-steel-esfera-azul-rubber-azul",
+    price: "$ 230.000",
+  },
+]
+
+// ── Omega — Seamaster (7 relojes) ─────────────────────────────────────────────
+export const seamasterWatches: Watch[] = [
+  {
+    id: "seamaster-crono-esfera-blanca-bezel-negro",
+    name: "Seamaster Crono Esfera Blanca Bezel Negro",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-esfera-blanca-bezel-negro",
+    video: CLDV + "seamaster-crono-esfera-blanca-bezel-negro",
+    price: "$ 300.000",
+  },
+  {
+    id: "seamaster-crono-esfera-negra-bezel-negro",
+    name: "Seamaster Crono Esfera Negra Bezel Negro",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-esfera-negra-bezel-negro",
+    video: CLDV + "seamaster-crono-esfera-negra-bezel-negro",
+    price: "$ 300.000",
+  },
+  {
+    id: "seamaster-crono-esfera-blanca-bezel-azul",
+    name: "Seamaster Crono Esfera Blanca Bezel Azul",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-esfera-blanca-bezel-azul",
+    video: CLDV + "seamaster-crono-esfera-blanca-bezel-azul",
+    price: "$ 300.000",
+  },
+  {
+    id: "seamaster-crono-pvd-esfera-negra",
+    name: "Seamaster Crono PVD Esfera Negra",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-pvd-esfera-negra",
+    video: CLDV + "seamaster-crono-pvd-esfera-negra",
+    price: "$ 300.000",
+  },
+  {
+    id: "seamaster-crono-esfera-azul-bezel-negro",
+    name: "Seamaster Crono Esfera Azul Bezel Negro",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-esfera-azul-bezel-negro",
+    video: CLDV + "seamaster-crono-esfera-azul-bezel-negro",
+    price: "$ 300.000",
+  },
+  {
+    id: "seamaster-crono-esfera-gris-bezel-negro",
+    name: "Seamaster Crono Esfera Gris Bezel Negro",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-esfera-gris-bezel-negro",
+    video: CLDV + "seamaster-crono-esfera-gris-bezel-negro",
+    price: "$ 300.000",
+  },
+  {
+    id: "seamaster-crono-esfera-azul-bezel-azul",
+    name: "Seamaster Crono Esfera Azul Bezel Azul",
+    brand: "Omega",
+    image: CLDP + "seamaster-crono-esfera-azul-bezel-azul",
+    video: CLDV + "seamaster-crono-esfera-azul-bezel-azul",
+    price: "$ 300.000",
   },
 ]

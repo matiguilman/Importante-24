@@ -13,6 +13,9 @@ import {
   rolexAAAWatches,
   rolexAutoWatches,
   patekWatches,
+  nautilusWatches,
+  aquanautWatches,
+  seamasterWatches,
   cartierWatches,
   tagHeuerWatches,
 } from "@/lib/watch-data"
@@ -26,6 +29,7 @@ export function CatalogPage({ scrollTo }: CatalogPageProps) {
 
   const showRolex    = activeCategory === "Todos" || activeCategory === "Rolex"
   const showPatek    = activeCategory === "Todos" || activeCategory === "Patek Philippe"
+  const showOmega    = activeCategory === "Todos" || activeCategory === "Omega"
   const showCartier  = activeCategory === "Todos" || activeCategory === "Cartier"
   const showTagHeuer = activeCategory === "Todos" || activeCategory === "Tag Heuer"
 
@@ -72,6 +76,30 @@ export function CatalogPage({ scrollTo }: CatalogPageProps) {
             id="patek-philippe"
             brand="Patek Philippe"
             watches={patekWatches}
+          />
+        )}
+
+        {showPatek && (
+          <CatalogSection
+            id="patek-nautilus"
+            brand="Patek Philippe — Nautilus"
+            watches={nautilusWatches}
+          />
+        )}
+
+        {showPatek && (
+          <CatalogSection
+            id="patek-aquanaut"
+            brand="Patek Philippe — Aquanaut"
+            watches={aquanautWatches}
+          />
+        )}
+
+        {showOmega && (
+          <CatalogSection
+            id="omega-seamaster"
+            brand="Omega — Seamaster"
+            watches={seamasterWatches}
           />
         )}
 
